@@ -1,0 +1,2958 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="pdoc 14.7.0"/>
+    <title>validators API documentation</title>
+
+    <style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
+    <style>/*! syntax-highlighting.css */pre{line-height:125%;}span.linenos{color:inherit; background-color:transparent; padding-left:5px; padding-right:20px;}.pdoc-code .hll{background-color:#49483e}.pdoc-code{background:#272822; color:#f8f8f2}.pdoc-code .c{color:#75715e}.pdoc-code .err{color:#960050; background-color:#1e0010}.pdoc-code .esc{color:#f8f8f2}.pdoc-code .g{color:#f8f8f2}.pdoc-code .k{color:#66d9ef}.pdoc-code .l{color:#ae81ff}.pdoc-code .n{color:#f8f8f2}.pdoc-code .o{color:#f92672}.pdoc-code .x{color:#f8f8f2}.pdoc-code .p{color:#f8f8f2}.pdoc-code .ch{color:#75715e}.pdoc-code .cm{color:#75715e}.pdoc-code .cp{color:#75715e}.pdoc-code .cpf{color:#75715e}.pdoc-code .c1{color:#75715e}.pdoc-code .cs{color:#75715e}.pdoc-code .gd{color:#f92672}.pdoc-code .ge{color:#f8f8f2; font-style:italic}.pdoc-code .gr{color:#f8f8f2}.pdoc-code .gh{color:#f8f8f2}.pdoc-code .gi{color:#a6e22e}.pdoc-code .go{color:#66d9ef}.pdoc-code .gp{color:#f92672; font-weight:bold}.pdoc-code .gs{color:#f8f8f2; font-weight:bold}.pdoc-code .gu{color:#75715e}.pdoc-code .gt{color:#f8f8f2}.pdoc-code .kc{color:#66d9ef}.pdoc-code .kd{color:#66d9ef}.pdoc-code .kn{color:#f92672}.pdoc-code .kp{color:#66d9ef}.pdoc-code .kr{color:#66d9ef}.pdoc-code .kt{color:#66d9ef}.pdoc-code .ld{color:#e6db74}.pdoc-code .m{color:#ae81ff}.pdoc-code .s{color:#e6db74}.pdoc-code .na{color:#a6e22e}.pdoc-code .nb{color:#f8f8f2}.pdoc-code .nc{color:#a6e22e}.pdoc-code .no{color:#66d9ef}.pdoc-code .nd{color:#a6e22e}.pdoc-code .ni{color:#f8f8f2}.pdoc-code .ne{color:#a6e22e}.pdoc-code .nf{color:#a6e22e}.pdoc-code .nl{color:#f8f8f2}.pdoc-code .nn{color:#f8f8f2}.pdoc-code .nx{color:#a6e22e}.pdoc-code .py{color:#f8f8f2}.pdoc-code .nt{color:#f92672}.pdoc-code .nv{color:#f8f8f2}.pdoc-code .ow{color:#f92672}.pdoc-code .w{color:#f8f8f2}.pdoc-code .mb{color:#ae81ff}.pdoc-code .mf{color:#ae81ff}.pdoc-code .mh{color:#ae81ff}.pdoc-code .mi{color:#ae81ff}.pdoc-code .mo{color:#ae81ff}.pdoc-code .sa{color:#e6db74}.pdoc-code .sb{color:#e6db74}.pdoc-code .sc{color:#e6db74}.pdoc-code .dl{color:#e6db74}.pdoc-code .sd{color:#e6db74}.pdoc-code .s2{color:#e6db74}.pdoc-code .se{color:#ae81ff}.pdoc-code .sh{color:#e6db74}.pdoc-code .si{color:#e6db74}.pdoc-code .sx{color:#e6db74}.pdoc-code .sr{color:#e6db74}.pdoc-code .s1{color:#e6db74}.pdoc-code .ss{color:#e6db74}.pdoc-code .bp{color:#f8f8f2}.pdoc-code .fm{color:#a6e22e}.pdoc-code .vc{color:#f8f8f2}.pdoc-code .vg{color:#f8f8f2}.pdoc-code .vi{color:#f8f8f2}.pdoc-code .vm{color:#f8f8f2}</style>
+    <style>/*! theme.css */:root{--pdoc-background:#212529;}.pdoc{--text:#f7f7f7;--muted:#9d9d9d;--link:#58a6ff;--link-hover:#3989ff;--code:#333;--active:#555;--accent:#343434;--accent2:#555;--nav-hover:rgba(0, 0, 0, 0.1);--name:#77C1FF;--def:#0cdd0c;--annotation:#00c037;}</style>
+    <style>/*! layout.css */html, body{width:100%;height:100%;}html, main{scroll-behavior:smooth;}body{background-color:var(--pdoc-background);}@media (max-width:769px){#navtoggle{cursor:pointer;position:absolute;width:50px;height:40px;top:1rem;right:1rem;border-color:var(--text);color:var(--text);display:flex;opacity:0.8;z-index:999;}#navtoggle:hover{opacity:1;}#togglestate + div{display:none;}#togglestate:checked + div{display:inherit;}main, header{padding:2rem 3vw;}header + main{margin-top:-3rem;}.git-button{display:none !important;}nav input[type="search"]{max-width:77%;}nav input[type="search"]:first-child{margin-top:-6px;}nav input[type="search"]:valid ~ *{display:none !important;}}@media (min-width:770px){:root{--sidebar-width:clamp(12.5rem, 28vw, 22rem);}nav{position:fixed;overflow:auto;height:100vh;width:var(--sidebar-width);}main, header{padding:3rem 2rem 3rem calc(var(--sidebar-width) + 3rem);width:calc(54rem + var(--sidebar-width));max-width:100%;}header + main{margin-top:-4rem;}#navtoggle{display:none;}}#togglestate{position:absolute;height:0;opacity:0;}nav.pdoc{--pad:clamp(0.5rem, 2vw, 1.75rem);--indent:1.5rem;background-color:var(--accent);border-right:1px solid var(--accent2);box-shadow:0 0 20px rgba(50, 50, 50, .2) inset;padding:0 0 0 var(--pad);overflow-wrap:anywhere;scrollbar-width:thin; scrollbar-color:var(--accent2) transparent; z-index:1}nav.pdoc::-webkit-scrollbar{width:.4rem; }nav.pdoc::-webkit-scrollbar-thumb{background-color:var(--accent2); }nav.pdoc > div{padding:var(--pad) 0;}nav.pdoc .module-list-button{display:inline-flex;align-items:center;color:var(--text);border-color:var(--muted);margin-bottom:1rem;}nav.pdoc .module-list-button:hover{border-color:var(--text);}nav.pdoc input[type=search]{display:block;outline-offset:0;width:calc(100% - var(--pad));}nav.pdoc .logo{max-width:calc(100% - var(--pad));max-height:35vh;display:block;margin:0 auto 1rem;transform:translate(calc(-.5 * var(--pad)), 0);}nav.pdoc ul{list-style:none;padding-left:0;}nav.pdoc > div > ul{margin-left:calc(0px - var(--pad));}nav.pdoc li a{padding:.2rem 0 .2rem calc(var(--pad) + var(--indent));}nav.pdoc > div > ul > li > a{padding-left:var(--pad);}nav.pdoc li{transition:all 100ms;}nav.pdoc li:hover{background-color:var(--nav-hover);}nav.pdoc a, nav.pdoc a:hover{color:var(--text);}nav.pdoc a{display:block;}nav.pdoc > h2:first-of-type{margin-top:1.5rem;}nav.pdoc .class:before{content:"class ";color:var(--muted);}nav.pdoc .function:after{content:"()";color:var(--muted);}nav.pdoc footer:before{content:"";display:block;width:calc(100% - var(--pad));border-top:solid var(--accent2) 1px;margin-top:1.5rem;padding-top:.5rem;}nav.pdoc footer{font-size:small;}</style>
+    <style>/*! content.css */.pdoc{color:var(--text);box-sizing:border-box;line-height:1.5;background:none;}.pdoc .pdoc-button{cursor:pointer;display:inline-block;border:solid black 1px;border-radius:2px;font-size:.75rem;padding:calc(0.5em - 1px) 1em;transition:100ms all;}.pdoc .alert{padding:1rem 1rem 1rem calc(1.5rem + 24px);border:1px solid transparent;border-radius:.25rem;background-repeat:no-repeat;background-position:.75rem center;margin-bottom:1rem;}.pdoc .alert > em{display:none;}.pdoc .alert > *:last-child{margin-bottom:0;}.pdoc .alert.note {color:#084298;background-color:#cfe2ff;border-color:#b6d4fe;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23084298%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2016A8%208%200%201%200%208%200a8%208%200%200%200%200%2016zm.93-9.412-1%204.705c-.07.34.029.533.304.533.194%200%20.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703%200-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381%202.29-.287zM8%205.5a1%201%200%201%201%200-2%201%201%200%200%201%200%202z%22/%3E%3C/svg%3E");}.pdoc .alert.warning{color:#664d03;background-color:#fff3cd;border-color:#ffecb5;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23664d03%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8.982%201.566a1.13%201.13%200%200%200-1.96%200L.165%2013.233c-.457.778.091%201.767.98%201.767h13.713c.889%200%201.438-.99.98-1.767L8.982%201.566zM8%205c.535%200%20.954.462.9.995l-.35%203.507a.552.552%200%200%201-1.1%200L7.1%205.995A.905.905%200%200%201%208%205zm.002%206a1%201%200%201%201%200%202%201%201%200%200%201%200-2z%22/%3E%3C/svg%3E");}.pdoc .alert.danger{color:#842029;background-color:#f8d7da;border-color:#f5c2c7;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23842029%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5.52.359A.5.5%200%200%201%206%200h4a.5.5%200%200%201%20.474.658L8.694%206H12.5a.5.5%200%200%201%20.395.807l-7%209a.5.5%200%200%201-.873-.454L6.823%209.5H3.5a.5.5%200%200%201-.48-.641l2.5-8.5z%22/%3E%3C/svg%3E");}.pdoc .visually-hidden{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;margin:-1px !important;overflow:hidden !important;clip:rect(0, 0, 0, 0) !important;white-space:nowrap !important;border:0 !important;}.pdoc h1, .pdoc h2, .pdoc h3{font-weight:300;margin:.3em 0;padding:.2em 0;}.pdoc > section:not(.module-info) h1{font-size:1.5rem;font-weight:500;}.pdoc > section:not(.module-info) h2{font-size:1.4rem;font-weight:500;}.pdoc > section:not(.module-info) h3{font-size:1.3rem;font-weight:500;}.pdoc > section:not(.module-info) h4{font-size:1.2rem;}.pdoc > section:not(.module-info) h5{font-size:1.1rem;}.pdoc a{text-decoration:none;color:var(--link);}.pdoc a:hover{color:var(--link-hover);}.pdoc blockquote{margin-left:2rem;}.pdoc pre{border-top:1px solid var(--accent2);border-bottom:1px solid var(--accent2);margin-top:0;margin-bottom:1em;padding:.5rem 0 .5rem .5rem;overflow-x:auto;background-color:var(--code);}.pdoc code{color:var(--text);padding:.2em .4em;margin:0;font-size:85%;background-color:var(--accent);border-radius:6px;}.pdoc a > code{color:inherit;}.pdoc pre > code{display:inline-block;font-size:inherit;background:none;border:none;padding:0;}.pdoc > section:not(.module-info){margin-bottom:1.5rem;}.pdoc .modulename{margin-top:0;font-weight:bold;}.pdoc .modulename a{color:var(--link);transition:100ms all;}.pdoc .git-button{float:right;border:solid var(--link) 1px;}.pdoc .git-button:hover{background-color:var(--link);color:var(--pdoc-background);}.view-source-toggle-state,.view-source-toggle-state ~ .pdoc-code{display:none;}.view-source-toggle-state:checked ~ .pdoc-code{display:block;}.view-source-button{display:inline-block;float:right;font-size:.75rem;line-height:1.5rem;color:var(--muted);padding:0 .4rem 0 1.3rem;cursor:pointer;text-indent:-2px;}.view-source-button > span{visibility:hidden;}.module-info .view-source-button{float:none;display:flex;justify-content:flex-end;margin:-1.2rem .4rem -.2rem 0;}.view-source-button::before{position:absolute;content:"View Source";display:list-item;list-style-type:disclosure-closed;}.view-source-toggle-state:checked ~ .attr .view-source-button::before,.view-source-toggle-state:checked ~ .view-source-button::before{list-style-type:disclosure-open;}.pdoc .docstring{margin-bottom:1.5rem;}.pdoc section:not(.module-info) .docstring{margin-left:clamp(0rem, 5vw - 2rem, 1rem);}.pdoc .docstring .pdoc-code{margin-left:1em;margin-right:1em;}.pdoc h1:target,.pdoc h2:target,.pdoc h3:target,.pdoc h4:target,.pdoc h5:target,.pdoc h6:target,.pdoc .pdoc-code > pre > span:target{background-color:var(--active);box-shadow:-1rem 0 0 0 var(--active);}.pdoc .pdoc-code > pre > span:target{display:block;}.pdoc div:target > .attr,.pdoc section:target > .attr,.pdoc dd:target > a{background-color:var(--active);}.pdoc *{scroll-margin:2rem;}.pdoc .pdoc-code .linenos{user-select:none;}.pdoc .attr:hover{filter:contrast(0.95);}.pdoc section, .pdoc .classattr{position:relative;}.pdoc .headerlink{--width:clamp(1rem, 3vw, 2rem);position:absolute;top:0;left:calc(0rem - var(--width));transition:all 100ms ease-in-out;opacity:0;}.pdoc .headerlink::before{content:"#";display:block;text-align:center;width:var(--width);height:2.3rem;line-height:2.3rem;font-size:1.5rem;}.pdoc .attr:hover ~ .headerlink,.pdoc *:target > .headerlink,.pdoc .headerlink:hover{opacity:1;}.pdoc .attr{display:block;margin:.5rem 0 .5rem;padding:.4rem .4rem .4rem 1rem;background-color:var(--accent);overflow-x:auto;}.pdoc .classattr{margin-left:2rem;}.pdoc .name{color:var(--name);font-weight:bold;}.pdoc .def{color:var(--def);font-weight:bold;}.pdoc .signature{background-color:transparent;}.pdoc .param, .pdoc .return-annotation{white-space:pre;}.pdoc .signature.multiline .param{display:block;}.pdoc .signature.condensed .param{display:inline-block;}.pdoc .annotation{color:var(--annotation);}.pdoc .view-value-toggle-state,.pdoc .view-value-toggle-state ~ .default_value{display:none;}.pdoc .view-value-toggle-state:checked ~ .default_value{display:inherit;}.pdoc .view-value-button{font-size:.5rem;vertical-align:middle;border-style:dashed;margin-top:-0.1rem;}.pdoc .view-value-button:hover{background:white;}.pdoc .view-value-button::before{content:"show";text-align:center;width:2.2em;display:inline-block;}.pdoc .view-value-toggle-state:checked ~ .view-value-button::before{content:"hide";}.pdoc .inherited{margin-left:2rem;}.pdoc .inherited dt{font-weight:700;}.pdoc .inherited dt, .pdoc .inherited dd{display:inline;margin-left:0;margin-bottom:.5rem;}.pdoc .inherited dd:not(:last-child):after{content:", ";}.pdoc .inherited .class:before{content:"class ";}.pdoc .inherited .function a:after{content:"()";}.pdoc .search-result .docstring{overflow:auto;max-height:25vh;}.pdoc .search-result.focused > .attr{background-color:var(--active);}.pdoc .attribution{margin-top:2rem;display:block;opacity:0.5;transition:all 200ms;filter:grayscale(100%);}.pdoc .attribution:hover{opacity:1;filter:grayscale(0%);}.pdoc .attribution img{margin-left:5px;height:35px;vertical-align:middle;width:70px;transition:all 200ms;}.pdoc table{display:block;width:max-content;max-width:100%;overflow:auto;margin-bottom:1rem;}.pdoc table th{font-weight:600;}.pdoc table th, .pdoc table td{padding:6px 13px;border:1px solid var(--accent2);}</style>
+    <style>/*! custom.css */</style></head>
+<body>
+    <nav class="pdoc">
+        <label id="navtoggle" for="togglestate" class="pdoc-button"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke-linecap='round' stroke="currentColor" stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg></label>
+        <input id="togglestate" type="checkbox" aria-hidden="true" tabindex="-1">
+        <div><!-- Remove pdoc-button -->
+
+
+
+
+            <h2>Submodules</h2>
+            <ul>
+                    <li><a href="validators/between.html">between</a></li>
+                    <li><a href="validators/cron.html">cron</a></li>
+                    <li><a href="validators/domain.html">domain</a></li>
+                    <li><a href="validators/email.html">email</a></li>
+                    <li><a href="validators/hostname.html">hostname</a></li>
+                    <li><a href="validators/iban.html">iban</a></li>
+                    <li><a href="validators/length.html">length</a></li>
+                    <li><a href="validators/mac_address.html">mac_address</a></li>
+                    <li><a href="validators/slug.html">slug</a></li>
+                    <li><a href="validators/url.html">url</a></li>
+                    <li><a href="validators/uuid.html">uuid</a></li>
+            </ul>
+
+            <h2>API Documentation</h2>
+                <ul class="memberlist">
+            <li>
+                    <a class="function" href="#between">between</a>
+            </li>
+            <li>
+                    <a class="function" href="#bsc_address">bsc_address</a>
+            </li>
+            <li>
+                    <a class="function" href="#btc_address">btc_address</a>
+            </li>
+            <li>
+                    <a class="function" href="#eth_address">eth_address</a>
+            </li>
+            <li>
+                    <a class="function" href="#trx_address">trx_address</a>
+            </li>
+            <li>
+                    <a class="function" href="#amex">amex</a>
+            </li>
+            <li>
+                    <a class="function" href="#card_number">card_number</a>
+            </li>
+            <li>
+                    <a class="function" href="#diners">diners</a>
+            </li>
+            <li>
+                    <a class="function" href="#discover">discover</a>
+            </li>
+            <li>
+                    <a class="function" href="#jcb">jcb</a>
+            </li>
+            <li>
+                    <a class="function" href="#mastercard">mastercard</a>
+            </li>
+            <li>
+                    <a class="function" href="#visa">visa</a>
+            </li>
+            <li>
+                    <a class="function" href="#unionpay">unionpay</a>
+            </li>
+            <li>
+                    <a class="function" href="#calling_code">calling_code</a>
+            </li>
+            <li>
+                    <a class="function" href="#country_code">country_code</a>
+            </li>
+            <li>
+                    <a class="function" href="#currency">currency</a>
+            </li>
+            <li>
+                    <a class="function" href="#cron">cron</a>
+            </li>
+            <li>
+                    <a class="function" href="#domain">domain</a>
+            </li>
+            <li>
+                    <a class="function" href="#email">email</a>
+            </li>
+            <li>
+                    <a class="function" href="#base16">base16</a>
+            </li>
+            <li>
+                    <a class="function" href="#base32">base32</a>
+            </li>
+            <li>
+                    <a class="function" href="#base58">base58</a>
+            </li>
+            <li>
+                    <a class="function" href="#base64">base64</a>
+            </li>
+            <li>
+                    <a class="function" href="#cusip">cusip</a>
+            </li>
+            <li>
+                    <a class="function" href="#isin">isin</a>
+            </li>
+            <li>
+                    <a class="function" href="#sedol">sedol</a>
+            </li>
+            <li>
+                    <a class="function" href="#md5">md5</a>
+            </li>
+            <li>
+                    <a class="function" href="#sha1">sha1</a>
+            </li>
+            <li>
+                    <a class="function" href="#sha224">sha224</a>
+            </li>
+            <li>
+                    <a class="function" href="#sha256">sha256</a>
+            </li>
+            <li>
+                    <a class="function" href="#sha384">sha384</a>
+            </li>
+            <li>
+                    <a class="function" href="#sha512">sha512</a>
+            </li>
+            <li>
+                    <a class="function" href="#hostname">hostname</a>
+            </li>
+            <li>
+                    <a class="function" href="#es_cif">es_cif</a>
+            </li>
+            <li>
+                    <a class="function" href="#es_doi">es_doi</a>
+            </li>
+            <li>
+                    <a class="function" href="#es_nie">es_nie</a>
+            </li>
+            <li>
+                    <a class="function" href="#es_nif">es_nif</a>
+            </li>
+            <li>
+                    <a class="function" href="#fi_business_id">fi_business_id</a>
+            </li>
+            <li>
+                    <a class="function" href="#fi_ssn">fi_ssn</a>
+            </li>
+            <li>
+                    <a class="function" href="#fr_department">fr_department</a>
+            </li>
+            <li>
+                    <a class="function" href="#fr_ssn">fr_ssn</a>
+            </li>
+            <li>
+                    <a class="function" href="#ind_aadhar">ind_aadhar</a>
+            </li>
+            <li>
+                    <a class="function" href="#ind_pan">ind_pan</a>
+            </li>
+            <li>
+                    <a class="function" href="#iban">iban</a>
+            </li>
+            <li>
+                    <a class="function" href="#ipv4">ipv4</a>
+            </li>
+            <li>
+                    <a class="function" href="#ipv6">ipv6</a>
+            </li>
+            <li>
+                    <a class="function" href="#length">length</a>
+            </li>
+            <li>
+                    <a class="function" href="#mac_address">mac_address</a>
+            </li>
+            <li>
+                    <a class="function" href="#slug">slug</a>
+            </li>
+            <li>
+                    <a class="function" href="#url">url</a>
+            </li>
+            <li>
+                    <a class="function" href="#uuid">uuid</a>
+            </li>
+            <li>
+                    <a class="class" href="#ValidationError">ValidationError</a>
+                            <ul class="memberlist">
+                        <li>
+                                <a class="function" href="#ValidationError.__init__">ValidationError</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#ValidationError.func">func</a>
+                        </li>
+                </ul>
+
+            </li>
+            <li>
+                    <a class="function" href="#validator">validator</a>
+            </li>
+    </ul>
+
+
+
+        <a class="attribution" title="pdoc: Python API documentation generator" href="https://pdoc.dev" target="_blank">
+            built with <span class="visually-hidden">pdoc</span><img
+                alt="pdoc logo"
+                src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20role%3D%22img%22%20aria-label%3D%22pdoc%20logo%22%20width%3D%22300%22%20height%3D%22150%22%20viewBox%3D%22-1%200%2060%2030%22%3E%3Ctitle%3Epdoc%3C/title%3E%3Cpath%20d%3D%22M29.621%2021.293c-.011-.273-.214-.475-.511-.481a.5.5%200%200%200-.489.503l-.044%201.393c-.097.551-.695%201.215-1.566%201.704-.577.428-1.306.486-2.193.182-1.426-.617-2.467-1.654-3.304-2.487l-.173-.172a3.43%203.43%200%200%200-.365-.306.49.49%200%200%200-.286-.196c-1.718-1.06-4.931-1.47-7.353.191l-.219.15c-1.707%201.187-3.413%202.131-4.328%201.03-.02-.027-.49-.685-.141-1.763.233-.721.546-2.408.772-4.076.042-.09.067-.187.046-.288.166-1.347.277-2.625.241-3.351%201.378-1.008%202.271-2.586%202.271-4.362%200-.976-.272-1.935-.788-2.774-.057-.094-.122-.18-.184-.268.033-.167.052-.339.052-.516%200-1.477-1.202-2.679-2.679-2.679-.791%200-1.496.352-1.987.9a6.3%206.3%200%200%200-1.001.029c-.492-.564-1.207-.929-2.012-.929-1.477%200-2.679%201.202-2.679%202.679A2.65%202.65%200%200%200%20.97%206.554c-.383.747-.595%201.572-.595%202.41%200%202.311%201.507%204.29%203.635%205.107-.037.699-.147%202.27-.423%203.294l-.137.461c-.622%202.042-2.515%208.257%201.727%2010.643%201.614.908%203.06%201.248%204.317%201.248%202.665%200%204.492-1.524%205.322-2.401%201.476-1.559%202.886-1.854%206.491.82%201.877%201.393%203.514%201.753%204.861%201.068%202.223-1.713%202.811-3.867%203.399-6.374.077-.846.056-1.469.054-1.537zm-4.835%204.313c-.054.305-.156.586-.242.629-.034-.007-.131-.022-.307-.157-.145-.111-.314-.478-.456-.908.221.121.432.25.675.355.115.039.219.051.33.081zm-2.251-1.238c-.05.33-.158.648-.252.694-.022.001-.125-.018-.307-.157-.217-.166-.488-.906-.639-1.573.358.344.754.693%201.198%201.036zm-3.887-2.337c-.006-.116-.018-.231-.041-.342.635.145%201.189.368%201.599.625.097.231.166.481.174.642-.03.049-.055.101-.067.158-.046.013-.128.026-.298.004-.278-.037-.901-.57-1.367-1.087zm-1.127-.497c.116.306.176.625.12.71-.019.014-.117.045-.345.016-.206-.027-.604-.332-.986-.695.41-.051.816-.056%201.211-.031zm-4.535%201.535c.209.22.379.47.358.598-.006.041-.088.138-.351.234-.144.055-.539-.063-.979-.259a11.66%2011.66%200%200%200%20.972-.573zm.983-.664c.359-.237.738-.418%201.126-.554.25.237.479.548.457.694-.006.042-.087.138-.351.235-.174.064-.694-.105-1.232-.375zm-3.381%201.794c-.022.145-.061.29-.149.401-.133.166-.358.248-.69.251h-.002c-.133%200-.306-.26-.45-.621.417.091.854.07%201.291-.031zm-2.066-8.077a4.78%204.78%200%200%201-.775-.584c.172-.115.505-.254.88-.378l-.105.962zm-.331%202.302a10.32%2010.32%200%200%201-.828-.502c.202-.143.576-.328.984-.49l-.156.992zm-.45%202.157l-.701-.403c.214-.115.536-.249.891-.376a11.57%2011.57%200%200%201-.19.779zm-.181%201.716c.064.398.194.702.298.893-.194-.051-.435-.162-.736-.398.061-.119.224-.3.438-.495zM8.87%204.141c0%20.152-.123.276-.276.276s-.275-.124-.275-.276.123-.276.276-.276.275.124.275.276zm-.735-.389a1.15%201.15%200%200%200-.314.783%201.16%201.16%200%200%200%201.162%201.162c.457%200%20.842-.27%201.032-.653.026.117.042.238.042.362a1.68%201.68%200%200%201-1.679%201.679%201.68%201.68%200%200%201-1.679-1.679c0-.843.626-1.535%201.436-1.654zM5.059%205.406A1.68%201.68%200%200%201%203.38%207.085a1.68%201.68%200%200%201-1.679-1.679c0-.037.009-.072.011-.109.21.3.541.508.935.508a1.16%201.16%200%200%200%201.162-1.162%201.14%201.14%200%200%200-.474-.912c.015%200%20.03-.005.045-.005.926.001%201.679.754%201.679%201.68zM3.198%204.141c0%20.152-.123.276-.276.276s-.275-.124-.275-.276.123-.276.276-.276.275.124.275.276zM1.375%208.964c0-.52.103-1.035.288-1.52.466.394%201.06.64%201.717.64%201.144%200%202.116-.725%202.499-1.738.383%201.012%201.355%201.738%202.499%201.738.867%200%201.631-.421%202.121-1.062.307.605.478%201.267.478%201.942%200%202.486-2.153%204.51-4.801%204.51s-4.801-2.023-4.801-4.51zm24.342%2019.349c-.985.498-2.267.168-3.813-.979-3.073-2.281-5.453-3.199-7.813-.705-1.315%201.391-4.163%203.365-8.423.97-3.174-1.786-2.239-6.266-1.261-9.479l.146-.492c.276-1.02.395-2.457.444-3.268a6.11%206.11%200%200%200%201.18.115%206.01%206.01%200%200%200%202.536-.562l-.006.175c-.802.215-1.848.612-2.021%201.25-.079.295.021.601.274.837.219.203.415.364.598.501-.667.304-1.243.698-1.311%201.179-.02.144-.022.507.393.787.213.144.395.26.564.365-1.285.521-1.361.96-1.381%201.126-.018.142-.011.496.427.746l.854.489c-.473.389-.971.914-.999%201.429-.018.278.095.532.316.713.675.556%201.231.721%201.653.721.059%200%20.104-.014.158-.02.207.707.641%201.64%201.513%201.64h.013c.8-.008%201.236-.345%201.462-.626.173-.216.268-.457.325-.692.424.195.93.374%201.372.374.151%200%20.294-.021.423-.068.732-.27.944-.704.993-1.021.009-.061.003-.119.002-.179.266.086.538.147.789.147.15%200%20.294-.021.423-.069.542-.2.797-.489.914-.754.237.147.478.258.704.288.106.014.205.021.296.021.356%200%20.595-.101.767-.229.438.435%201.094.992%201.656%201.067.106.014.205.021.296.021a1.56%201.56%200%200%200%20.323-.035c.17.575.453%201.289.866%201.605.358.273.665.362.914.362a.99.99%200%200%200%20.421-.093%201.03%201.03%200%200%200%20.245-.164c.168.428.39.846.68%201.068.358.273.665.362.913.362a.99.99%200%200%200%20.421-.093c.317-.148.512-.448.639-.762.251.157.495.257.726.257.127%200%20.25-.024.37-.071.427-.17.706-.617.841-1.314.022-.015.047-.022.068-.038.067-.051.133-.104.196-.159-.443%201.486-1.107%202.761-2.086%203.257zM8.66%209.925a.5.5%200%201%200-1%200c0%20.653-.818%201.205-1.787%201.205s-1.787-.552-1.787-1.205a.5.5%200%201%200-1%200c0%201.216%201.25%202.205%202.787%202.205s2.787-.989%202.787-2.205zm4.4%2015.965l-.208.097c-2.661%201.258-4.708%201.436-6.086.527-1.542-1.017-1.88-3.19-1.844-4.198a.4.4%200%200%200-.385-.414c-.242-.029-.406.164-.414.385-.046%201.249.367%203.686%202.202%204.896.708.467%201.547.7%202.51.7%201.248%200%202.706-.392%204.362-1.174l.185-.086a.4.4%200%200%200%20.205-.527c-.089-.204-.326-.291-.527-.206zM9.547%202.292c.093.077.205.114.317.114a.5.5%200%200%200%20.318-.886L8.817.397a.5.5%200%200%200-.703.068.5.5%200%200%200%20.069.703l1.364%201.124zm-7.661-.065c.086%200%20.173-.022.253-.068l1.523-.893a.5.5%200%200%200-.506-.863l-1.523.892a.5.5%200%200%200-.179.685c.094.158.261.247.432.247z%22%20transform%3D%22matrix%28-1%200%200%201%2058%200%29%22%20fill%3D%22%233bb300%22/%3E%3Cpath%20d%3D%22M.3%2021.86V10.18q0-.46.02-.68.04-.22.18-.5.28-.54%201.34-.54%201.06%200%201.42.28.38.26.44.78.76-1.04%202.38-1.04%201.64%200%203.1%201.54%201.46%201.54%201.46%203.58%200%202.04-1.46%203.58-1.44%201.54-3.08%201.54-1.64%200-2.38-.92v4.04q0%20.46-.04.68-.02.22-.18.5-.14.3-.5.42-.36.12-.98.12-.62%200-1-.12-.36-.12-.52-.4-.14-.28-.18-.5-.02-.22-.02-.68zm3.96-9.42q-.46.54-.46%201.18%200%20.64.46%201.18.48.52%201.2.52.74%200%201.24-.52.52-.52.52-1.18%200-.66-.48-1.18-.48-.54-1.26-.54-.76%200-1.22.54zm14.741-8.36q.16-.3.54-.42.38-.12%201-.12.64%200%201.02.12.38.12.52.42.16.3.18.54.04.22.04.68v11.94q0%20.46-.04.7-.02.22-.18.5-.3.54-1.7.54-1.38%200-1.54-.98-.84.96-2.34.96-1.8%200-3.28-1.56-1.48-1.58-1.48-3.66%200-2.1%201.48-3.68%201.5-1.58%203.28-1.58%201.48%200%202.3%201v-4.2q0-.46.02-.68.04-.24.18-.52zm-3.24%2010.86q.52.54%201.26.54.74%200%201.22-.54.5-.54.5-1.18%200-.66-.48-1.22-.46-.56-1.26-.56-.8%200-1.28.56-.48.54-.48%201.2%200%20.66.52%201.2zm7.833-1.2q0-2.4%201.68-3.96%201.68-1.56%203.84-1.56%202.16%200%203.82%201.56%201.66%201.54%201.66%203.94%200%201.66-.86%202.96-.86%201.28-2.1%201.9-1.22.6-2.54.6-1.32%200-2.56-.64-1.24-.66-2.1-1.92-.84-1.28-.84-2.88zm4.18%201.44q.64.48%201.3.48.66%200%201.32-.5.66-.5.66-1.48%200-.98-.62-1.46-.62-.48-1.34-.48-.72%200-1.34.5-.62.5-.62%201.48%200%20.96.64%201.46zm11.412-1.44q0%20.84.56%201.32.56.46%201.18.46.64%200%201.18-.36.56-.38.9-.38.6%200%201.46%201.06.46.58.46%201.04%200%20.76-1.1%201.42-1.14.8-2.8.8-1.86%200-3.58-1.34-.82-.64-1.34-1.7-.52-1.08-.52-2.36%200-1.3.52-2.34.52-1.06%201.34-1.7%201.66-1.32%203.54-1.32.76%200%201.48.22.72.2%201.06.4l.32.2q.36.24.56.38.52.4.52.92%200%20.5-.42%201.14-.72%201.1-1.38%201.1-.38%200-1.08-.44-.36-.34-1.04-.34-.66%200-1.24.48-.58.48-.58%201.34z%22%20fill%3D%22green%22/%3E%3C/svg%3E"/>
+        </a>
+</div>
+    </nav>
+    <main class="pdoc">
+            <section class="module-info">
+                    <h1 class="modulename">
+validators    </h1>
+
+                        <div class="docstring"><p>Validate Anything!</p>
+</div>
+
+                
+                
+                
+            </section>
+                <section id="between">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">between</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="o">~</span><span class="n">PossibleValueTypes</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">min_val</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="o">~</span><span class="n">PossibleValueTypes</span><span class="p">,</span> <span class="n">validators</span><span class="o">.</span><span class="n">_extremes</span><span class="o">.</span><span class="n">AbsMin</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">max_val</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="o">~</span><span class="n">PossibleValueTypes</span><span class="p">,</span> <span class="n">validators</span><span class="o">.</span><span class="n">_extremes</span><span class="o">.</span><span class="n">AbsMax</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#between"></a>
+    
+            <div class="docstring"><p>Validate that a number is between minimum and/or maximum value.</p>
+
+<p>This will work with any comparable type, such as floats, decimals and dates
+not just integers. This validator is originally based on <a href="https://github.com/wtforms/wtforms/blob/master/src/wtforms/validators.py#L166-L220">WTForms-NumberRange-Validator</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mf">13.2</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbetween-args&quot;&gt;Output: ValidationError(func=between, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="n">min_val</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1999</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Value which is to be compared.</li>
+<li><strong>min_val:</strong>  The minimum required value of the number.
+If not provided, minimum value will not be checked.</li>
+<li><strong>max_val:</strong>  The maximum value of the number.
+If not provided, maximum value will not be checked.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is in between the given conditions.
+  (ValidationError): If <code>value</code> is not in between the given conditions.</p>
+</blockquote>
+
+<h6 id="raises">Raises:</h6>
+
+<ul>
+<li><strong>(ValueError):</strong>  If <code>min_val</code> is greater than <code>max_val</code>.</li>
+<li><strong>(TypeError):</strong>  If there's a type mismatch during comparison.</li>
+</ul>
+
+<h6 id="note">Note:</h6>
+
+<blockquote>
+  <ul>
+  <li><code>PossibleValueTypes</code> = <code>TypeVar("PossibleValueTypes", int, float, str, datetime)</code></li>
+  <li>If neither <code>min_val</code> nor <code>max_val</code> is provided, result will always be <code>True</code>.</li>
+  </ul>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="bsc_address">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">bsc_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#bsc_address"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid binance smart chain address.</p>
+
+<p>Full validation is implemented for BSC addresses.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">bsc_address</span><span class="p">(</span><span class="s1">&#39;0x4e5acf9684652BEa56F2f01b7101a225Ee33d23f&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">bsc_address</span><span class="p">(</span><span class="s1">&#39;0x4g5acf9684652BEa56F2f01b7101a225Eh33d23z&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbsc_address-args&quot;&gt;Output: ValidationError(func=bsc_address, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  BSC address string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid bsc address.
+  (ValidationError): If <code>value</code> is an invalid bsc address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="btc_address">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">btc_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#btc_address"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid bitcoin address.</p>
+
+<p>Full validation is implemented for P2PKH and P2SH addresses.
+For segwit addresses a regexp is used to provide a reasonable
+estimate on whether the address is valid.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">btc_address</span><span class="p">(</span><span class="s1">&#39;3Cwgr2g7vsi1bXDUkpEnVoRLA9w4FZfC69&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">btc_address</span><span class="p">(</span><span class="s1">&#39;1BvBMsEYstWetqTFn5Au4m4GFg7xJaNVN2&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbtc_address-args&quot;&gt;Output: ValidationError(func=btc_address, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Bitcoin address string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid bitcoin address.
+  (ValidationError): If <code>value</code> is an invalid bitcoin address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="eth_address">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">eth_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#eth_address"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid ethereum address.</p>
+
+<p>Full validation is implemented for ERC20 addresses.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">eth_address</span><span class="p">(</span><span class="s1">&#39;0x9cc14ba4f9f68ca159ea4ebf2c292a808aaeb598&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">eth_address</span><span class="p">(</span><span class="s1">&#39;0x8Ba1f109551bD432803012645Ac136ddd64DBa72&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunceth_address-args&quot;&gt;Output: ValidationError(func=eth_address, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Ethereum address string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid ethereum address.
+  (ValidationError): If <code>value</code> is an invalid ethereum address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="trx_address">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">trx_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#trx_address"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid tron address.</p>
+
+<p>Full validation is implemented for TRC20 tron addresses.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">trx_address</span><span class="p">(</span><span class="s1">&#39;TLjfbTbpZYDQ4EoA4N5CLNgGjfbF8ZWz38&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">trx_address</span><span class="p">(</span><span class="s1">&#39;TR2G7Rm4vFqF8EpY4U5xdLdQ7XgJ2U8Vd&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunctrx_address-args&quot;&gt;Output: ValidationError(func=trx_address, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Tron address string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid tron address.
+  (ValidationError): If <code>value</code> is an invalid tron address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="amex">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">amex</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#amex"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid American Express card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">amex</span><span class="p">(</span><span class="s1">&#39;378282246310005&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">amex</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncamex-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=amex, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  American Express card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid American Express card number.
+  (ValidationError): If <code>value</code> is an invalid American Express card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="card_number">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">card_number</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#card_number"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid generic card number.</p>
+
+<p>This validator is based on <a href="https://github.com/mmcloughlin/luhn">Luhn's algorithm</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">card_number</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">card_number</span><span class="p">(</span><span class="s1">&#39;4242424242424241&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunccard_number-argsvalue-4242424242424241&quot;&gt;Output: ValidationError(func=card_number, args={&#39;value&#39;: &#39;4242424242424241&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Generic card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid generic card number.
+  (ValidationError): If <code>value</code> is an invalid generic card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="diners">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">diners</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#diners"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid Diners Club card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">diners</span><span class="p">(</span><span class="s1">&#39;3056930009020004&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">diners</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncdiners-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=diners, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Diners Club card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Diners Club card number.
+  (ValidationError): If <code>value</code> is an invalid Diners Club card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="discover">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">discover</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#discover"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid Discover card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">discover</span><span class="p">(</span><span class="s1">&#39;6011111111111117&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">discover</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncdiscover-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=discover, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Discover card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Discover card number.
+  (ValidationError): If <code>value</code> is an invalid Discover card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="jcb">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">jcb</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#jcb"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid JCB card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">jcb</span><span class="p">(</span><span class="s1">&#39;3566002020360505&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">jcb</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncjcb-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=jcb, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  JCB card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid JCB card number.
+  (ValidationError): If <code>value</code> is an invalid JCB card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="mastercard">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">mastercard</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#mastercard"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid Mastercard card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mastercard</span><span class="p">(</span><span class="s1">&#39;5555555555554444&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mastercard</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncmastercard-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=mastercard, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Mastercard card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Mastercard card number.
+  (ValidationError): If <code>value</code> is an invalid Mastercard card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="visa">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">visa</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#visa"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid Visa card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">visa</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">visa</span><span class="p">(</span><span class="s1">&#39;2223003122003222&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncvisa-argsvalue-2223003122003222&quot;&gt;Output: ValidationError(func=visa, args={&#39;value&#39;: &#39;2223003122003222&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Visa card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Visa card number.
+  (ValidationError): If <code>value</code> is an invalid Visa card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="unionpay">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">unionpay</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#unionpay"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid UnionPay card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">unionpay</span><span class="p">(</span><span class="s1">&#39;6200000000000005&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">unionpay</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncunionpay-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=unionpay, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  UnionPay card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid UnionPay card number.
+  (ValidationError): If <code>value</code> is an invalid UnionPay card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="calling_code">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">calling_code</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#calling_code"></a>
+    
+            <div class="docstring"><p>Validates given calling code.</p>
+
+<p>This performs country's calling code validation.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">calling_code</span><span class="p">(</span><span class="s1">&#39;+91&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">calling_code</span><span class="p">(</span><span class="s1">&#39;-31&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunccalling_code-argsvalue-31&quot;&gt;Output: ValidationError(func=calling_code, args={&#39;value&#39;: &#39;-31&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Country's calling code string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid calling code.
+  (ValidationError): If <code>value</code> is an invalid calling code.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="country_code">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">country_code</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">iso_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>,</span><span class="param">	<span class="n">ignore_case</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#country_code"></a>
+    
+            <div class="docstring"><p>Validates given country code.</p>
+
+<p>This performs a case-sensitive <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> country code validation.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;GB&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha3&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-false&quot;&gt;Output: False&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;USA&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;840&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;numeric&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;iN&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha2&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-false-2&quot;&gt;Output: False&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;ZWE&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha3&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Country code string to validate.</li>
+<li><strong>iso_format:</strong>  ISO format to be used. Available options are:
+<code>auto</code>, <code>alpha2</code>, <code>alpha3</code> and <code>numeric</code>.</li>
+<li><strong>ignore_case:</strong>  Enable/Disable case-sensitive matching.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid country code.
+  (ValidationError): If <code>value</code> is an invalid country code.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="currency">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">currency</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_symbols</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">ignore_case</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#currency"></a>
+    
+            <div class="docstring"><p>Validates given currency code.</p>
+
+<p>This performs <a href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217</a> currency code/symbol validation.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">currency</span><span class="p">(</span><span class="s1">&#39;USD&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">currency</span><span class="p">(</span><span class="s1">&#39;ZWX&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunccurrency-argsvalue-zwx&quot;&gt;Output: ValidationError(func=currency, args={&#39;value&#39;: &#39;ZWX&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Currency code/symbol string to validate.</li>
+<li><strong>skip_symbols:</strong>  Skip currency symbol validation.</li>
+<li><strong>ignore_case:</strong>  Enable/Disable case-sensitive matching.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid currency code.
+  (ValidationError): If <code>value</code> is an invalid currency code.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="cron">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">cron</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#cron"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid cron string.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cron</span><span class="p">(</span><span class="s1">&#39;*/5 * * * *&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cron</span><span class="p">(</span><span class="s1">&#39;30-20 * * * *&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunccron&quot;&gt;Output: ValidationError(func=cron, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Cron string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid cron string.
+  (ValidationError): If <code>value</code> is an invalid cron string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="domain">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">domain</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#domain"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid domain.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;example.com&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;example.com/&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncdomain&quot;&gt;Output: ValidationError(func=domain, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Supports IDN domains as well::</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;xn----gtbspbbmkef.xn--p1ai&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Domain string to validate.</li>
+<li><strong>consider_tld:</strong>  Restrict domain to TLDs allowed by IANA.</li>
+<li><strong>rfc_1034:</strong>  Allows optional trailing dot in the domain name.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>.</li>
+<li><strong>rfc_2782:</strong>  Domain name is of type service record.
+Allows optional underscores in the domain name.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid domain name.
+  (ValidationError): If <code>value</code> is an invalid domain name.</p>
+</blockquote>
+
+<h6 id="raises">Raises:</h6>
+
+<ul>
+<li><strong>(UnicodeError):</strong>  If <code>value</code> cannot be encoded into <code>idna</code> or decoded into <code>utf-8</code>.</li>
+</ul>
+</div>
+
+
+                </section>
+                <section id="email">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">email</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">ipv6_address</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">ipv4_address</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">simple_host</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#email"></a>
+    
+            <div class="docstring"><p>Validate an email address.</p>
+
+<p>This was inspired from <a href="https://github.com/django/django/blob/main/django/core/validators.py#L174">Django's email validator</a>.
+Also ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>, <a href="https://www.rfc-editor.org/rfc/rfc5321">RFC 5321</a> and <a href="https://www.rfc-editor.org/rfc/rfc5322">RFC 5322</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">email</span><span class="p">(</span><span class="s1">&#39;someone@example.com&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">email</span><span class="p">(</span><span class="s1">&#39;bogus@@&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerroremailemail-argsvalue-bogus&quot;&gt;Output: ValidationError(email=email, args={&#39;value&#39;: &#39;bogus@@&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  eMail string to validate.</li>
+<li><strong>ipv6_address:</strong>  When the domain part is an IPv6 address.</li>
+<li><strong>ipv4_address:</strong>  When the domain part is an IPv4 address.</li>
+<li><strong>simple_host:</strong>  When the domain part is a simple hostname.</li>
+<li><strong>rfc_1034:</strong>  Allow trailing dot in domain name.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>.</li>
+<li><strong>rfc_2782:</strong>  Domain name is of type service record.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid eMail.
+  (ValidationError): If <code>value</code> is an invalid eMail.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="base16">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">base16</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#base16"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid base16 encoding.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base16</span><span class="p">(</span><span class="s1">&#39;a3f4b2&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base16</span><span class="p">(</span><span class="s1">&#39;a3f4Z1&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase16-argsvalue-a3f4z1&quot;&gt;Output: ValidationError(func=base16, args={&#39;value&#39;: &#39;a3f4Z1&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  base16 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid base16 encoding.
+  (ValidationError): If <code>value</code> is an invalid base16 encoding.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="base32">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">base32</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#base32"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid base32 encoding.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base32</span><span class="p">(</span><span class="s1">&#39;MFZWIZLTOQ======&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base32</span><span class="p">(</span><span class="s1">&#39;MfZW3zLT9Q======&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase32-argsvalue-mfzw3zlt9q&quot;&gt;Output: ValidationError(func=base32, args={&#39;value&#39;: &#39;MfZW3zLT9Q======&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  base32 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid base32 encoding.
+  (ValidationError): If <code>value</code> is an invalid base32 encoding.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="base58">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">base58</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#base58"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid base58 encoding.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base58</span><span class="p">(</span><span class="s1">&#39;14pq6y9H2DLGahPsM4s7ugsNSD2uxpHsJx&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base58</span><span class="p">(</span><span class="s1">&#39;cUSECm5YzcXJwP&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase58-argsvalue-cusecm5yzcxjwp&quot;&gt;Output: ValidationError(func=base58, args={&#39;value&#39;: &#39;cUSECm5YzcXJwP&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  base58 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid base58 encoding.
+  (ValidationError): If <code>value</code> is an invalid base58 encoding.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="base64">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">base64</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#base64"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid base64 encoding.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base64</span><span class="p">(</span><span class="s1">&#39;Y2hhcmFjdGVyIHNldA==&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base64</span><span class="p">(</span><span class="s1">&#39;cUSECm5YzcXJwP&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase64-argsvalue-cusecm5yzcxjwp&quot;&gt;Output: ValidationError(func=base64, args={&#39;value&#39;: &#39;cUSECm5YzcXJwP&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  base64 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid base64 encoding.
+  (ValidationError): If <code>value</code> is an invalid base64 encoding.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="cusip">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">cusip</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#cusip"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid CUSIP.</p>
+
+<p>Checks if the value is a valid <a href="https://en.wikipedia.org/wiki/CUSIP">CUSIP</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cusip</span><span class="p">(</span><span class="s1">&#39;037833DP2&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cusip</span><span class="p">(</span><span class="s1">&#39;037833DP3&#39;</span><span class="p">)</span>
+<span class="go">ValidationFailure(func=cusip, ...)</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  CUSIP string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid CUSIP string.
+  (ValidationError): If <code>value</code> is an invalid CUSIP string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="isin">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">isin</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#isin"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid ISIN.</p>
+
+<p>Checks if the value is a valid <a href="https://en.wikipedia.org/wiki/International_Securities_Identification_Number">ISIN</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">isin</span><span class="p">(</span><span class="s1">&#39;037833DP2&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">isin</span><span class="p">(</span><span class="s1">&#39;037833DP3&#39;</span><span class="p">)</span>
+<span class="go">ValidationFailure(func=isin, ...)</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  ISIN string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid ISIN string.
+  (ValidationError): If <code>value</code> is an invalid ISIN string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="sedol">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">sedol</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#sedol"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid SEDOL.</p>
+
+<p>Checks if the value is a valid <a href="https://en.wikipedia.org/wiki/SEDOL">SEDOL</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sedol</span><span class="p">(</span><span class="s1">&#39;2936921&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sedol</span><span class="p">(</span><span class="s1">&#39;29A6922&#39;</span><span class="p">)</span>
+<span class="go">ValidationFailure(func=sedol, ...)</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  SEDOL string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid SEDOL string.
+  (ValidationError): If <code>value</code> is an invalid SEDOL string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="md5">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">md5</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#md5"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid MD5 hash.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;d41d8cd98f00b204e9800998ecf8427e&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncmd5-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=md5, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  MD5 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid MD5 hash.
+  (ValidationError): If <code>value</code> is an invalid MD5 hash.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="sha1">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">sha1</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#sha1"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid SHA1 hash.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1</span><span class="p">(</span><span class="s1">&#39;da39a3ee5e6b4b0d3255bfef95601890afd80709&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha1-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha1, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  SHA1 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid SHA1 hash.
+  (ValidationError): If <code>value</code> is an invalid SHA1 hash.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="sha224">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">sha224</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#sha224"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid SHA224 hash.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha224</span><span class="p">(</span><span class="s1">&#39;d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha224</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha224-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha224, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  SHA224 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid SHA224 hash.
+  (ValidationError): If <code>value</code> is an invalid SHA224 hash.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="sha256">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">sha256</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#sha256"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid SHA256 hash.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha256</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s1">&#39;e3b0c44298fc1c149afbf4c8996fb924&#39;</span>
+<span class="gp">... </span>    <span class="s1">&#39;27ae41e4649b934ca495991b7852b855&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha256</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha256-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha256, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  SHA256 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid SHA256 hash.
+  (ValidationError): If <code>value</code> is an invalid SHA256 hash.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="sha384">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">sha384</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#sha384"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid SHA384 hash.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha384</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s1">&#39;cb00753f45a35e8bb5a03d699ac65007272c32ab0eded163&#39;</span>
+<span class="gp">... </span>    <span class="s1">&#39;1a8b605a43ff5bed8086072ba1e7cc2358baeca134c825a7&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha384</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha384-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha384, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  SHA384 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid SHA384 hash.
+  (ValidationError): If <code>value</code> is an invalid SHA384 hash.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="sha512">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">sha512</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#sha512"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid SHA512 hash.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha512</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s1">&#39;cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce&#39;</span>
+<span class="gp">... </span>    <span class="s1">&#39;9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9&#39;</span>
+<span class="gp">... </span>    <span class="s1">&#39;27da3e&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha512</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha512-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha512, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  SHA512 string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid SHA512 hash.
+  (ValidationError): If <code>value</code> is an invalid SHA512 hash.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="hostname">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">hostname</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_ipv6_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">skip_ipv4_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">may_have_port</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">maybe_simple</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#hostname"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid hostname.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;ubuntu-pc:443&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;this-pc&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;xn----gtbspbbmkef.xn--p1ai:65535&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;_example.com&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-4&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;123.5.77.88:31000&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-5&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;12.12.12.12&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-6&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[::1]:22&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-7&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;dead:beef:0:0:0:0000:42:1&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-8&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[0:0:0:0:0:ffff:1.2.3.4]:-65538&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunchostname&quot;&gt;Output: ValidationError(func=hostname, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[0:&amp;:b:c:@:e:f::]:9999&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunchostname-2&quot;&gt;Output: ValidationError(func=hostname, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Hostname string to validate.</li>
+<li><strong>skip_ipv6_addr:</strong>  When hostname string cannot be an IPv6 address.</li>
+<li><strong>skip_ipv4_addr:</strong>  When hostname string cannot be an IPv4 address.</li>
+<li><strong>may_have_port:</strong>  Hostname string may contain port number.</li>
+<li><strong>maybe_simple:</strong>  Hostname string maybe only hyphens and alpha-numerals.</li>
+<li><strong>consider_tld:</strong>  Restrict domain to TLDs allowed by IANA.</li>
+<li><strong>private:</strong>  Embedded IP address is public if <code>False</code>, private/local if <code>True</code>.</li>
+<li><strong>rfc_1034:</strong>  Allow trailing dot in domain/host name.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>.</li>
+<li><strong>rfc_2782:</strong>  Domain/Host name is of type service record.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid hostname.
+  (ValidationError): If <code>value</code> is an invalid hostname.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="es_cif">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">es_cif</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#es_cif"></a>
+    
+            <div class="docstring"><p>Validate a Spanish CIF.</p>
+
+<p>Each company in Spain prior to 2008 had a distinct CIF and has been
+discontinued. For more information see <a href="https://es.wikipedia.org/wiki/C%C3%B3digo_de_identificaci%C3%B3n_fiscal">wikipedia.org/cif</a>.</p>
+
+<p>The new replacement is to use NIF for absolutely everything. The issue is
+that there are "types" of NIFs now: company, person [citizen or resident]
+all distinguished by the first character of the DOI. For this reason we
+will continue to call CIFs NIFs, that are used for companies.</p>
+
+<p>This validator is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_cif</span><span class="p">(</span><span class="s1">&#39;B25162520&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_cif</span><span class="p">(</span><span class="s1">&#39;B25162529&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_cif-args&quot;&gt;Output: ValidationError(func=es_cif, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  DOI string which is to be validated.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid DOI string.
+  (ValidationError): If <code>value</code> is an invalid DOI string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="es_doi">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">es_doi</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#es_doi"></a>
+    
+            <div class="docstring"><p>Validate a Spanish DOI.</p>
+
+<p>A DOI in spain is all NIF / CIF / NIE / DNI -- a digital ID.
+For more information see <a href="https://es.wikipedia.org/wiki/Identificador_de_objeto_digital">wikipedia.org/doi</a>. This validator
+is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_doi</span><span class="p">(</span><span class="s1">&#39;X0095892M&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_doi</span><span class="p">(</span><span class="s1">&#39;X0095892X&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_doi-args&quot;&gt;Output: ValidationError(func=es_doi, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  DOI string which is to be validated.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid DOI string.
+  (ValidationError): If <code>value</code> is an invalid DOI string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="es_nie">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">es_nie</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#es_nie"></a>
+    
+            <div class="docstring"><p>Validate a Spanish NIE.</p>
+
+<p>The NIE is a tax identification number in Spain, known in Spanish
+as the NIE, or more formally the Número de identidad de extranjero.
+For more information see <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_de_identidad_de_extranjero">wikipedia.org/nie</a>. This validator
+is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nie</span><span class="p">(</span><span class="s1">&#39;X0095892M&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nie</span><span class="p">(</span><span class="s1">&#39;X0095892X&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_nie-args&quot;&gt;Output: ValidationError(func=es_nie, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  DOI string which is to be validated.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid DOI string.
+  (ValidationError): If <code>value</code> is an invalid DOI string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="es_nif">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">es_nif</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#es_nif"></a>
+    
+            <div class="docstring"><p>Validate a Spanish NIF.</p>
+
+<p>Each entity, be it person or company in Spain has a distinct NIF. Since
+we've designated CIF to be a company NIF, this NIF is only for person.
+For more information see <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_de_identificaci%C3%B3n_fiscal">wikipedia.org/nif</a>. This validator
+is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nif</span><span class="p">(</span><span class="s1">&#39;26643189N&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nif</span><span class="p">(</span><span class="s1">&#39;26643189X&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_nif-args&quot;&gt;Output: ValidationError(func=es_nif, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  DOI string which is to be validated.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid DOI string.
+  (ValidationError): If <code>value</code> is an invalid DOI string.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="fi_business_id">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">fi_business_id</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#fi_business_id"></a>
+    
+            <div class="docstring"><p>Validate a Finnish Business ID.</p>
+
+<p>Each company in Finland has a distinct business id. For more
+information see <a href="http://en.wikipedia.org/wiki/Finnish_Trade_Register">Finnish Trade Register</a></p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_business_id</span><span class="p">(</span><span class="s1">&#39;0112038-9&#39;</span><span class="p">)</span>  <span class="c1"># Fast Monkeys Ltd</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_business_id</span><span class="p">(</span><span class="s1">&#39;1234567-8&#39;</span><span class="p">)</span>  <span class="c1"># Bogus ID</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfi_business_id&quot;&gt;Output: ValidationError(func=fi_business_id, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Business ID string to be validated.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid finnish business id.
+  (ValidationError): If <code>value</code> is an invalid finnish business id.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="fi_ssn">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">fi_ssn</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span>, </span><span class="param"><span class="o">*</span>, </span><span class="param"><span class="n">allow_temporal_ssn</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#fi_ssn"></a>
+    
+            <div class="docstring"><p>Validate a Finnish Social Security Number.</p>
+
+<p>This validator is based on <a href="https://github.com/django/django-localflavor-fi/">django-localflavor-fi</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_ssn</span><span class="p">(</span><span class="s1">&#39;010101-0101&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_ssn</span><span class="p">(</span><span class="s1">&#39;101010-0102&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfi_ssn-args&quot;&gt;Output: ValidationError(func=fi_ssn, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Social Security Number to be validated.</li>
+<li><strong>allow_temporal_ssn:</strong>  Whether to accept temporal SSN numbers. Temporal SSN numbers are the
+ones where the serial is in the range [900-999]. By default temporal
+SSN numbers are valid.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid finnish SSN.
+  (ValidationError): If <code>value</code> is an invalid finnish SSN.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="fr_department">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">fr_department</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#fr_department"></a>
+    
+            <div class="docstring"><p>Validate a french department number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># can be an integer</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;20&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;971&quot;</span><span class="p">)</span>  <span class="c1"># Guadeloupe</span>
+<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;00&quot;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_department-args&quot;&gt;Output: ValidationError(func=fr_department, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2A&#39;</span><span class="p">)</span>  <span class="c1"># Corsica</span>
+<span class="go">&lt;h1 id=&quot;output-true-4&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2B&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-5&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2C&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_department-args-2&quot;&gt;Output: ValidationError(func=fr_department, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  French department number to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid french department number.
+  (ValidationError): If <code>value</code> is an invalid french department number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="fr_ssn">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">fr_ssn</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#fr_ssn"></a>
+    
+            <div class="docstring"><p>Validate a french Social Security Number.</p>
+
+<p>Each french citizen has a distinct Social Security Number.
+For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s%C3%A9curit%C3%A9_sociale_en_France">French Social Security Number</a> (sadly unavailable in english).</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089 46&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089&#39;</span><span class="p">)</span>  <span class="c1"># control key is optional</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;3 84 12 76 451 089 46&#39;</span><span class="p">)</span>  <span class="c1"># wrong gender number</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_ssn-args&quot;&gt;Output: ValidationError(func=fr_ssn, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089 47&#39;</span><span class="p">)</span>  <span class="c1"># wrong control key</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_ssn-args-2&quot;&gt;Output: ValidationError(func=fr_ssn, args=...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  French Social Security Number string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid french Social Security Number.
+  (ValidationError): If <code>value</code> is an invalid french Social Security Number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="ind_aadhar">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">ind_aadhar</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#ind_aadhar"></a>
+    
+            <div class="docstring"><p>Validate an indian aadhar card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ind_aadhar</span><span class="p">(</span><span class="s1">&#39;3675 9834 6015&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ind_aadhar</span><span class="p">(</span><span class="s1">&#39;3675 ABVC 2133&#39;</span><span class="p">)</span>
+<span class="go">ValidationFailure(func=aadhar, args={&#39;value&#39;: &#39;3675 ABVC 2133&#39;})</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Aadhar card number string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid aadhar card number.
+  (ValidationError): If <code>value</code> is an invalid aadhar card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="ind_pan">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">ind_pan</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#ind_pan"></a>
+    
+            <div class="docstring"><p>Validate a pan card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ind_pan</span><span class="p">(</span><span class="s1">&#39;ABCDE9999K&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ind_pan</span><span class="p">(</span><span class="s1">&#39;ABC5d7896B&#39;</span><span class="p">)</span>
+<span class="go">ValidationFailure(func=pan, args={&#39;value&#39;: &#39;ABC5d7896B&#39;})</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  PAN card number string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid PAN card number.
+  (ValidationError): If <code>value</code> is an invalid PAN card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="iban">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">iban</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#iban"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid IBAN code.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">iban</span><span class="p">(</span><span class="s1">&#39;DE29100500001061045672&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">iban</span><span class="p">(</span><span class="s1">&#39;123456&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunciban&quot;&gt;Output: ValidationError(func=iban, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  IBAN string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid IBAN code.
+  (ValidationError): If <code>value</code> is an invalid IBAN code.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="ipv4">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">ipv4</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">cidr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">host_bit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#ipv4"></a>
+    
+            <div class="docstring"><p>Returns whether a given value is a valid IPv4 address.</p>
+
+<p>From Python version 3.9.5 leading zeros are no longer tolerated
+and are treated as an error. The initial version of ipv4 validator
+was inspired from <a href="https://github.com/wtforms/wtforms/blob/master/src/wtforms/validators.py">WTForms IPAddress validator</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;123.0.0.7&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;1.1.1.1/8&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;900.80.70.11&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncipv4-argsvalue-900807011&quot;&gt;Output: ValidationError(func=ipv4, args={&#39;value&#39;: &#39;900.80.70.11&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  IP address string to validate.</li>
+<li><strong>cidr:</strong>  IP address string may contain CIDR notation.</li>
+<li><strong>strict:</strong>  IP address string is strictly in CIDR notation.</li>
+<li><strong>private:</strong>  IP address is public if <code>False</code>, private/local/loopback/broadcast if <code>True</code>.</li>
+<li><strong>host_bit:</strong>  If <code>False</code> and host bits (along with network bits) _are_ set in the supplied
+address, this function raises a validation error. ref <a href="https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Network">IPv4Network</a>.
+<h6 id="returns">Returns:</h6></li>
+</ul>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid IPv4 address.
+  (ValidationError): If <code>value</code> is an invalid IPv4 address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="ipv6">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">ipv6</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">cidr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">host_bit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#ipv6"></a>
+    
+            <div class="docstring"><p>Returns if a given value is a valid IPv6 address.</p>
+
+<p>Including IPv4-mapped IPv6 addresses. The initial version of ipv6 validator
+was inspired from <a href="https://github.com/wtforms/wtforms/blob/master/src/wtforms/validators.py">WTForms IPAddress validator</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;::ffff:192.0.2.128&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;::1/128&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;abc.0.0.1&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncipv6-argsvalue-abc001&quot;&gt;Output: ValidationError(func=ipv6, args={&#39;value&#39;: &#39;abc.0.0.1&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  IP address string to validate.</li>
+<li><strong>cidr:</strong>  IP address string may contain CIDR annotation.</li>
+<li><strong>strict:</strong>  IP address string is strictly in CIDR notation.</li>
+<li><strong>host_bit:</strong>  If <code>False</code> and host bits (along with network bits) _are_ set in the supplied
+address, this function raises a validation error. ref <a href="https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Network">IPv6Network</a>.
+<h6 id="returns">Returns:</h6></li>
+</ul>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid IPv6 address.
+  (ValidationError): If <code>value</code> is an invalid IPv6 address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="length">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">length</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">min_val</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">max_val</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#length"></a>
+    
+            <div class="docstring"><p>Return whether or not the length of given string is within a specified range.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunclength&quot;&gt;Output: ValidationError(func=length, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  The string to validate.</li>
+<li><strong>min_val:</strong>  The minimum required length of the string. If not provided,
+minimum length will not be checked.</li>
+<li><strong>max_val:</strong>  The maximum length of the string. If not provided,
+maximum length will not be checked.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>len(value)</code> is in between the given conditions.
+  (ValidationError): If <code>len(value)</code> is not in between the given conditions.</p>
+</blockquote>
+
+<h6 id="raises">Raises:</h6>
+
+<ul>
+<li><strong>(ValueError):</strong>  If either <code>min_val</code> or <code>max_val</code> is negative.</li>
+</ul>
+</div>
+
+
+                </section>
+                <section id="mac_address">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">mac_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#mac_address"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid MAC address.</p>
+
+<p>This validator is based on <a href="https://github.com/wtforms/wtforms/blob/master/src/wtforms/validators.py#L482">WTForms MacAddress validator</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mac_address</span><span class="p">(</span><span class="s1">&#39;01:23:45:67:ab:CD&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mac_address</span><span class="p">(</span><span class="s1">&#39;00:00:00:00:00&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncmac_address-argsvalue-0000000000&quot;&gt;Output: ValidationError(func=mac_address, args={&#39;value&#39;: &#39;00:00:00:00:00&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  MAC address string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid MAC address.
+  (ValidationError): If <code>value</code> is an invalid MAC address.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="slug">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">slug</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#slug"></a>
+    
+            <div class="docstring"><p>Validate whether or not given value is valid slug.</p>
+
+<p>Valid slug can contain only lowercase alphanumeric characters and hyphens.
+It starts and ends with these lowercase alphanumeric characters.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">slug</span><span class="p">(</span><span class="s1">&#39;my-slug-2134&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">slug</span><span class="p">(</span><span class="s1">&#39;my.slug&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncslug-argsvalue-myslug&quot;&gt;Output: ValidationError(func=slug, args={&#39;value&#39;: &#39;my.slug&#39;})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Slug string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid slug.
+  (ValidationError): If <code>value</code> is an invalid slug.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="url">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">url</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_ipv6_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">skip_ipv4_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">may_have_port</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">simple_host</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">strict_query</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#url"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid URL.</p>
+
+<p>This validator was originally inspired from <a href="https://gist.github.com/dperini/729294">URL validator of dperini</a>.
+The following diagram is from <a href="https://github.com/treeform/urlly">urlly</a>::</p>
+
+<pre><code>    foo://admin:hunter1@example.com:8042/over/there?name=ferret#nose
+    \_/   \___/ \_____/ \_________/ \__/\_________/ \_________/ \__/
+     |      |       |       |        |       |          |         |
+  scheme username password hostname port    path      query    fragment
+</code></pre>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://duck.com&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;ftp://foobar.dk&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://10.0.0.1&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://example.com/&quot;&gt;user@example.com&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncurl&quot;&gt;Output: ValidationError(func=url, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  URL string to validate.</li>
+<li><strong>skip_ipv6_addr:</strong>  When URL string cannot contain an IPv6 address.</li>
+<li><strong>skip_ipv4_addr:</strong>  When URL string cannot contain an IPv4 address.</li>
+<li><strong>may_have_port:</strong>  URL string may contain port number.</li>
+<li><strong>simple_host:</strong>  URL string maybe only hyphens and alpha-numerals.</li>
+<li><strong>strict_query:</strong>  Fail validation on query string parsing error.</li>
+<li><strong>consider_tld:</strong>  Restrict domain to TLDs allowed by IANA.</li>
+<li><strong>private:</strong>  Embedded IP address is public if <code>False</code>, private/local if <code>True</code>.</li>
+<li><strong>rfc_1034:</strong>  Allow trailing dot in domain/host name.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>.</li>
+<li><strong>rfc_2782:</strong>  Domain/Host name is of type service record.
+Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid url.
+  (ValidationError): If <code>value</code> is an invalid url.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="uuid">
+                    <div class="attr function">
+                    <div class="decorator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">uuid</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">]</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#uuid"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid UUID-v4 string.</p>
+
+<p>This validator is based on <a href="https://github.com/wtforms/wtforms/blob/master/src/wtforms/validators.py#L539">WTForms UUID validator</a>.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">uuid</span><span class="p">(</span><span class="s1">&#39;2bc1c94f-0deb-43e9-92a1-4775189ec9f8&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">uuid</span><span class="p">(</span><span class="s1">&#39;2bc1c94f 0deb-43e9-92a1-4775189ec9f8&#39;</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfuncuuid&quot;&gt;Output: ValidationError(func=uuid, ...)&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  UUID string or object to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid UUID.
+  (ValidationError): If <code>value</code> is an invalid UUID.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="ValidationError">
+                    <div class="attr class">
+            
+    <span class="def">class</span>
+    <span class="name">ValidationError</span><wbr>(<span class="base">builtins.Exception</span>):
+
+        
+    </div>
+    <a class="headerlink" href="#ValidationError"></a>
+    
+            <div class="docstring"><p>Exception class when validation failure occurs.</p>
+</div>
+
+
+                            <div id="ValidationError.__init__" class="classattr">
+                                <div class="attr function">
+            
+        <span class="name">ValidationError</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>,</span><span class="param">	<span class="n">arg_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>,</span><span class="param">	<span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span></span>)</span>
+
+        
+    </div>
+    <a class="headerlink" href="#ValidationError.__init__"></a>
+    
+            <div class="docstring"><p>Initialize Validation Failure.</p>
+</div>
+
+
+                            </div>
+                            <div id="ValidationError.func" class="classattr">
+                                <div class="attr variable">
+            <span class="name">func</span>
+
+        
+    </div>
+    <a class="headerlink" href="#ValidationError.func"></a>
+    
+    
+
+                            </div>
+                            <div class="inherited">
+                                <h5>Inherited Members</h5>
+                                <dl>
+                                    <div><dt>builtins.BaseException</dt>
+                                <dd id="ValidationError.with_traceback" class="function">with_traceback</dd>
+                <dd id="ValidationError.add_note" class="function">add_note</dd>
+                <dd id="ValidationError.args" class="variable">args</dd>
+
+            </div>
+                                </dl>
+                            </div>
+                </section>
+                <section id="validator">
+                    <div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">validator</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#validator"></a>
+    
+            <div class="docstring"><p>A decorator that makes given function validator.</p>
+
+<p>Whenever the given <code>func</code> returns <code>False</code> this
+decorator returns <code><a href="#ValidationError">ValidationError</a></code> object.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nd">@validator</span>
+<span class="gp">... </span><span class="k">def</span><span class="w"> </span><span class="nf">even</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="n">value</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+  
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">even</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">&lt;h1 id=&quot;output-validationerrorfunceven-argsvalue-5&quot;&gt;Output: ValidationError(func=even, args={&#39;value&#39;: 5})&lt;/h1&gt;</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>func:</strong>  Function which is to be decorated.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Callable[..., ValidationError | Literal[True]]):
+      A decorator which returns either <code><a href="#ValidationError">ValidationError</a></code>
+      or <code>Literal[True]</code>.</p>
+</blockquote>
+
+<h6 id="raises">Raises:</h6>
+
+<ul>
+<li><strong>(ValidationError):</strong>  If <code>r_ve</code> or <code>RAISE_VALIDATION_ERROR</code> is <code>True</code></li>
+</ul>
+</div>
+
+
+                </section>
+    </main>
+</body>
+</html>
