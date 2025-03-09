@@ -1,3 +1,7 @@
+"""
+.. include:: ../README.md
+"""
+
 from typing import overload
 
 import click
@@ -12,6 +16,7 @@ def {{ validator.name }}({{ validator.params }}) -> click.ParamType:
     ...
 
 {{ validator.name }} = click_validatortype(validators.{{ validator.name }})
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.{{ validator.name }}` function."""
 {% endfor %}
 
 __all__ = [

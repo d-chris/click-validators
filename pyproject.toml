@@ -5,7 +5,7 @@ requires = [ "poetry-core" ]
 [tool.poetry]
 name = "click-validators"
 version = "0.0.0"
-description = "additional types for click parameter using validators."
+description = "additional types for `click` parameter using `validators`."
 authors = [ "Christoph Dörrer <d-chris@web.de>" ]
 readme = "README.md"
 packages = [ { include = "clicktypes" } ]
@@ -33,6 +33,10 @@ validators = "^0.34.0"
 [tool.poetry.group.dev.dependencies]
 jinja2 = "^3.1.6"
 black = "^25.1.0"
+
+[tool.poetry.group.docs.dependencies]
+pdoc = "^15.0.1"
+pathlibutil = "^0.3.5"
 
 [[tool.poetry.source]]
 name = "PyPI"

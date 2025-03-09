@@ -2,6 +2,8 @@
 
 ---
 
+Additional `click` parameter types are built on top of the `validators` library, providing a wide range of validation options for various data types, including email addresses, IP addresses, credit card numbers, and more. This package simplifies the process of adding robust validation to your Click-based CLI applications.
+
 - `clicktypes.amex()`
 - `clicktypes.base16()`
 - `clicktypes.base32()`
@@ -70,13 +72,14 @@ import click
 import clicktypes
 
 
-@click.command()
+@click.command(
+    help=clicktypes.email.__doc__.split("\n", maxsplit=1)[0],
+)
 @click.argument(
     "email",
     type=clicktypes.email(),
 )
 def main(email):
-    """Validate email address."""
     click.echo(f"valid {email=}")
 
 

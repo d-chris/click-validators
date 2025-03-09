@@ -1,3 +1,7 @@
+"""
+.. include:: ../README.md
+"""
+
 from typing import overload
 
 import click
@@ -13,6 +17,7 @@ def amex() -> click.ParamType:
 
 
 amex = click_validatortype(validators.amex)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.amex` function."""
 
 
 @overload
@@ -22,6 +27,7 @@ def base16() -> click.ParamType:
 
 
 base16 = click_validatortype(validators.base16)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base16` function."""
 
 
 @overload
@@ -31,6 +37,7 @@ def base32() -> click.ParamType:
 
 
 base32 = click_validatortype(validators.base32)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base32` function."""
 
 
 @overload
@@ -40,6 +47,7 @@ def base58() -> click.ParamType:
 
 
 base58 = click_validatortype(validators.base58)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base58` function."""
 
 
 @overload
@@ -49,6 +57,7 @@ def base64() -> click.ParamType:
 
 
 base64 = click_validatortype(validators.base64)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base64` function."""
 
 
 @overload
@@ -58,6 +67,7 @@ def between(min_val=None, max_val=None) -> click.ParamType:
 
 
 between = click_validatortype(validators.between)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.between` function."""
 
 
 @overload
@@ -67,6 +77,7 @@ def bsc_address() -> click.ParamType:
 
 
 bsc_address = click_validatortype(validators.bsc_address)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.bsc_address` function."""
 
 
 @overload
@@ -76,6 +87,7 @@ def btc_address() -> click.ParamType:
 
 
 btc_address = click_validatortype(validators.btc_address)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.btc_address` function."""
 
 
 @overload
@@ -85,6 +97,7 @@ def calling_code() -> click.ParamType:
 
 
 calling_code = click_validatortype(validators.calling_code)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.calling_code` function."""
 
 
 @overload
@@ -94,6 +107,7 @@ def card_number() -> click.ParamType:
 
 
 card_number = click_validatortype(validators.card_number)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.card_number` function."""
 
 
 @overload
@@ -103,6 +117,7 @@ def country_code(iso_format="auto", ignore_case=False) -> click.ParamType:
 
 
 country_code = click_validatortype(validators.country_code)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.country_code` function."""
 
 
 @overload
@@ -112,6 +127,7 @@ def cron() -> click.ParamType:
 
 
 cron = click_validatortype(validators.cron)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.cron` function."""
 
 
 @overload
@@ -121,6 +137,7 @@ def currency(skip_symbols=True, ignore_case=False) -> click.ParamType:
 
 
 currency = click_validatortype(validators.currency)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.currency` function."""
 
 
 @overload
@@ -130,6 +147,7 @@ def cusip() -> click.ParamType:
 
 
 cusip = click_validatortype(validators.cusip)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.cusip` function."""
 
 
 @overload
@@ -139,6 +157,7 @@ def diners() -> click.ParamType:
 
 
 diners = click_validatortype(validators.diners)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.diners` function."""
 
 
 @overload
@@ -148,6 +167,7 @@ def discover() -> click.ParamType:
 
 
 discover = click_validatortype(validators.discover)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.discover` function."""
 
 
 @overload
@@ -157,6 +177,7 @@ def domain(consider_tld=False, rfc_1034=False, rfc_2782=False) -> click.ParamTyp
 
 
 domain = click_validatortype(validators.domain)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.domain` function."""
 
 
 @overload
@@ -172,6 +193,7 @@ def email(
 
 
 email = click_validatortype(validators.email)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.email` function."""
 
 
 @overload
@@ -181,6 +203,7 @@ def es_cif() -> click.ParamType:
 
 
 es_cif = click_validatortype(validators.es_cif)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_cif` function."""
 
 
 @overload
@@ -190,6 +213,7 @@ def es_doi() -> click.ParamType:
 
 
 es_doi = click_validatortype(validators.es_doi)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_doi` function."""
 
 
 @overload
@@ -199,6 +223,7 @@ def es_nie() -> click.ParamType:
 
 
 es_nie = click_validatortype(validators.es_nie)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_nie` function."""
 
 
 @overload
@@ -208,6 +233,7 @@ def es_nif() -> click.ParamType:
 
 
 es_nif = click_validatortype(validators.es_nif)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_nif` function."""
 
 
 @overload
@@ -217,6 +243,7 @@ def eth_address() -> click.ParamType:
 
 
 eth_address = click_validatortype(validators.eth_address)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.eth_address` function."""
 
 
 @overload
@@ -226,6 +253,7 @@ def fi_business_id() -> click.ParamType:
 
 
 fi_business_id = click_validatortype(validators.fi_business_id)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fi_business_id` function."""
 
 
 @overload
@@ -235,6 +263,7 @@ def fi_ssn(allow_temporal_ssn=True) -> click.ParamType:
 
 
 fi_ssn = click_validatortype(validators.fi_ssn)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fi_ssn` function."""
 
 
 @overload
@@ -244,6 +273,7 @@ def fr_department() -> click.ParamType:
 
 
 fr_department = click_validatortype(validators.fr_department)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fr_department` function."""
 
 
 @overload
@@ -253,6 +283,7 @@ def fr_ssn() -> click.ParamType:
 
 
 fr_ssn = click_validatortype(validators.fr_ssn)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fr_ssn` function."""
 
 
 @overload
@@ -271,6 +302,7 @@ def hostname(
 
 
 hostname = click_validatortype(validators.hostname)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.hostname` function."""
 
 
 @overload
@@ -280,6 +312,7 @@ def iban() -> click.ParamType:
 
 
 iban = click_validatortype(validators.iban)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.iban` function."""
 
 
 @overload
@@ -289,6 +322,7 @@ def ind_aadhar() -> click.ParamType:
 
 
 ind_aadhar = click_validatortype(validators.ind_aadhar)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ind_aadhar` function."""
 
 
 @overload
@@ -298,6 +332,7 @@ def ind_pan() -> click.ParamType:
 
 
 ind_pan = click_validatortype(validators.ind_pan)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ind_pan` function."""
 
 
 @overload
@@ -307,6 +342,7 @@ def ipv4(cidr=True, strict=False, private=None, host_bit=True) -> click.ParamTyp
 
 
 ipv4 = click_validatortype(validators.ipv4)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ipv4` function."""
 
 
 @overload
@@ -316,6 +352,7 @@ def ipv6(cidr=True, strict=False, host_bit=True) -> click.ParamType:
 
 
 ipv6 = click_validatortype(validators.ipv6)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ipv6` function."""
 
 
 @overload
@@ -325,6 +362,7 @@ def isin() -> click.ParamType:
 
 
 isin = click_validatortype(validators.isin)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.isin` function."""
 
 
 @overload
@@ -334,6 +372,7 @@ def jcb() -> click.ParamType:
 
 
 jcb = click_validatortype(validators.jcb)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.jcb` function."""
 
 
 @overload
@@ -343,6 +382,7 @@ def length(min_val=None, max_val=None) -> click.ParamType:
 
 
 length = click_validatortype(validators.length)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.length` function."""
 
 
 @overload
@@ -352,6 +392,7 @@ def mac_address() -> click.ParamType:
 
 
 mac_address = click_validatortype(validators.mac_address)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.mac_address` function."""
 
 
 @overload
@@ -361,6 +402,7 @@ def mastercard() -> click.ParamType:
 
 
 mastercard = click_validatortype(validators.mastercard)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.mastercard` function."""
 
 
 @overload
@@ -370,6 +412,7 @@ def md5() -> click.ParamType:
 
 
 md5 = click_validatortype(validators.md5)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.md5` function."""
 
 
 @overload
@@ -379,6 +422,7 @@ def sedol() -> click.ParamType:
 
 
 sedol = click_validatortype(validators.sedol)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sedol` function."""
 
 
 @overload
@@ -388,6 +432,7 @@ def sha1() -> click.ParamType:
 
 
 sha1 = click_validatortype(validators.sha1)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha1` function."""
 
 
 @overload
@@ -397,6 +442,7 @@ def sha224() -> click.ParamType:
 
 
 sha224 = click_validatortype(validators.sha224)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha224` function."""
 
 
 @overload
@@ -406,6 +452,7 @@ def sha256() -> click.ParamType:
 
 
 sha256 = click_validatortype(validators.sha256)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha256` function."""
 
 
 @overload
@@ -415,6 +462,7 @@ def sha384() -> click.ParamType:
 
 
 sha384 = click_validatortype(validators.sha384)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha384` function."""
 
 
 @overload
@@ -424,6 +472,7 @@ def sha512() -> click.ParamType:
 
 
 sha512 = click_validatortype(validators.sha512)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha512` function."""
 
 
 @overload
@@ -433,6 +482,7 @@ def slug() -> click.ParamType:
 
 
 slug = click_validatortype(validators.slug)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.slug` function."""
 
 
 @overload
@@ -442,6 +492,7 @@ def trx_address() -> click.ParamType:
 
 
 trx_address = click_validatortype(validators.trx_address)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.trx_address` function."""
 
 
 @overload
@@ -451,6 +502,7 @@ def unionpay() -> click.ParamType:
 
 
 unionpay = click_validatortype(validators.unionpay)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.unionpay` function."""
 
 
 @overload
@@ -470,6 +522,7 @@ def url(
 
 
 url = click_validatortype(validators.url)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.url` function."""
 
 
 @overload
@@ -479,6 +532,7 @@ def uuid() -> click.ParamType:
 
 
 uuid = click_validatortype(validators.uuid)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.uuid` function."""
 
 
 @overload
@@ -488,6 +542,7 @@ def visa() -> click.ParamType:
 
 
 visa = click_validatortype(validators.visa)
+"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.visa` function."""
 
 
 __all__ = [
