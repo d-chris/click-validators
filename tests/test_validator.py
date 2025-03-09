@@ -4,6 +4,8 @@ from click.testing import CliRunner
 
 import clicktypes
 
+from . import validator_data
+
 
 def cli(validator: str, **kwargs):
     @click.command(help=validator)
@@ -36,12 +38,13 @@ def test_none(validator):
 
 
 @pytest.mark.parametrize(
-    "validator,value",
-    [
-        ("email", "fu@bar.com"),
-    ],
+    "validator,value,kwargs,expected",
+    sorted(
+        validator_data(),
+    ),
 )
-def test_cli(validator, value):
+def test_dataset(validator, value, kwargs, expected):
+
     runner = CliRunner()
-    result = runner.invoke(cli(validator), [value])
-    assert result.exit_code == 0
+    result = runner.invoke(cli(validator, **kwargs), [value])
+    assert result.exit_code == expected
