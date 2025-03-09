@@ -2,6 +2,9 @@ name: poetry-publish
 on:
   release:
     types: [released]
+env:
+  PYTHON_VERSION: "3.13"
+  POETRY_VERSION: "1.8.5"
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -10,9 +13,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.13
+          python-version: ${{ env.PYTHON_VERSION }}
       - name: Install poetry
-        run: pipx install poetry==1.8.5 --python 3.13
+        run: pipx install poetry==${{ env.POETRY_VERSION }} --python ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
           poetry install --only main,docs
