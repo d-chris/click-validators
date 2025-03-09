@@ -1,0 +1,21 @@
+from typing import overload
+
+import click
+import validators
+
+from .decorator import click_validatortype
+
+{% for validator in validators %}
+@overload
+def {{ validator.name }}({{ validator.params }}) -> click.ParamType:
+    """{{ validator.docstring }}"""
+    ...
+
+{{ validator.name }} = click_validatortype(validators.{{ validator.name }})
+{% endfor %}
+
+__all__ = [
+    {% for validator in validators %}
+    "{{ validator.name }}",
+    {% endfor %}
+]

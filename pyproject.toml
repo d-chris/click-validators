@@ -1,0 +1,47 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core" ]
+
+[tool.poetry]
+name = "click-validators"
+version = "0.0.0"
+description = "additional types for click parameter using validators."
+authors = [ "Christoph Dörrer <d-chris@web.de>" ]
+readme = "README.md"
+packages = [ { include = "clicktypes" } ]
+exclude = [ "clicktypes/__main__.py" ]
+keywords = [ "click", "validators" ]
+license = "MIT"
+classifiers = [
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+repository = "https://github.com/d-chris/click-validators"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.8"
+validators = "^0.34.0"
+
+[tool.poetry.group.dev.dependencies]
+jinja2 = "^3.1.6"
+black = "^25.1.0"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/legacy/"
+priority = "explicit"
+
+[tool.isort]
+profile = "black"
