@@ -13,6 +13,7 @@ exclude = [ "clicktypes/__main__.py" ]
 keywords = [ "click", "validators" ]
 license = "MIT"
 classifiers = [
+  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
@@ -26,7 +27,7 @@ classifiers = [
 repository = "https://github.com/d-chris/click-validators"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8.1"
 click = "^8.1.8"
 validators = "^0.34.0"
 eth-hash = { version = ">=0.7.0", extras = [ "pycryptodome" ], optional = true }
@@ -36,17 +37,17 @@ crypto-eth-addresses = [ "eth-hash" ]
 
 [tool.poetry.group.dev.dependencies]
 jinja2 = "^3.1.6"
-black = "^25.1.0"
+black = ">=24.8.0"
 tox = "^4.24.2"
 
 [tool.poetry.group.docs.dependencies]
-pdoc = "^15.0.1"
+pdoc = ">=14.0.0"
 pathlibutil = "^0.3.5"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.5"
-pytest-cov = "^6.0.0"
-pytest-randomly = "^3.16.0"
+pytest-cov = ">=4.1.0"
+pytest-randomly = "^3.15.0"
 
 [[tool.poetry.source]]
 name = "PyPI"
