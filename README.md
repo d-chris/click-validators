@@ -1,5 +1,15 @@
 # click-validators
 
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/click-validators)](https://pypi.org/project/click-validators/)
+[![PyPI - Version](https://img.shields.io/pypi/v/click-validators)](https://pypi.org/project/click-validators/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/click-validators)](https://pypi.org/project/click-validators/)
+[![PyPI - License](https://img.shields.io/pypi/l/click-validators)](https://raw.githubusercontent.com/d-chris/click-validators/main/LICENSE)
+[![GitHub - Pytest](https://img.shields.io/github/actions/workflow/status/d-chris/click-validators/pytest.yml?logo=github&label=pytest)](https://github.com/d-chris/click-validators/actions/workflows/pytest.yml)
+[![GitHub - Page](https://img.shields.io/website?url=https%3A%2F%2Fd-chris.github.io%2Fclick-validators&up_message=pdoc&logo=github&label=documentation)](https://d-chris.github.io/click-validators)
+[![GitHub - Release](https://img.shields.io/github/v/tag/d-chris/click-validators?logo=github&label=github)](https://github.com/d-chris/click-validators)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://raw.githubusercontent.com/d-chris/click-validators/main/.pre-commit-config.yaml)
+<!-- [![codecov](https://codecov.io/gh/d-chris/click-validators/graph/badge.svg?token=)](https://codecov.io/gh/d-chris/click-validators) -->
+
 ---
 
 Additional `click` parameter types are built on top of the `validators` library, providing a wide range of validation options for various data types, including email addresses, IP addresses, credit card numbers, and more. This package simplifies the process of adding robust validation to your Click-based CLI applications.
@@ -60,7 +70,9 @@ Additional `click` parameter types are built on top of the `validators` library,
 pip install click-validators
 ```
 
-to perform `validators.eth_address()` validation, you need to install the `eth-hash` package.
+to perform `validators.eth_address()` validation, you need to install the `eth-hash>=0.7.0` package.
+
+[![PyPI - eth-hash](https://img.shields.io/pypi/v/eth-hash?logo=pypi&logoColor=white&label=eth-hash[pycryptodome])](https://pypi.org/project/eth-hash/)
 
 ```cmd
 pip install click-validators[crypto-eth-addresses]
