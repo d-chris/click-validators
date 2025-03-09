@@ -7,8 +7,8 @@
 [![GitHub - Pytest](https://img.shields.io/github/actions/workflow/status/d-chris/click-validators/pytest.yml?logo=github&label=pytest)](https://github.com/d-chris/click-validators/actions/workflows/pytest.yml)
 [![GitHub - Page](https://img.shields.io/website?url=https%3A%2F%2Fd-chris.github.io%2Fclick-validators&up_message=pdoc&logo=github&label=documentation)](https://d-chris.github.io/click-validators)
 [![GitHub - Release](https://img.shields.io/github/v/tag/d-chris/click-validators?logo=github&label=github)](https://github.com/d-chris/click-validators)
+[![codecov](https://codecov.io/gh/d-chris/click-validators/graph/badge.svg?token=WY062DFVTR)](https://codecov.io/gh/d-chris/click-validators)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://raw.githubusercontent.com/d-chris/click-validators/main/.pre-commit-config.yaml)
-<!-- [![codecov](https://codecov.io/gh/d-chris/click-validators/graph/badge.svg?token=)](https://codecov.io/gh/d-chris/click-validators) -->
 
 ---
 
