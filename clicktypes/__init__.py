@@ -61,16 +61,6 @@ base64 = click_validatortype(validators.base64)
 
 
 @overload
-def between(min_val=None, max_val=None) -> click.ParamType:
-    """Validate that a number is between minimum and/or maximum value."""
-    ...
-
-
-between = click_validatortype(validators.between)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.between` function."""
-
-
-@overload
 def bsc_address() -> click.ParamType:
     """Return whether or not given value is a valid binance smart chain address."""
     ...
@@ -376,16 +366,6 @@ jcb = click_validatortype(validators.jcb)
 
 
 @overload
-def length(min_val=None, max_val=None) -> click.ParamType:
-    """Return whether or not the length of given string is within a specified range."""
-    ...
-
-
-length = click_validatortype(validators.length)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.length` function."""
-
-
-@overload
 def mac_address() -> click.ParamType:
     """Return whether or not given value is a valid MAC address."""
     ...
@@ -551,7 +531,6 @@ __all__ = [
     "base32",
     "base58",
     "base64",
-    "between",
     "bsc_address",
     "btc_address",
     "calling_code",
@@ -581,7 +560,6 @@ __all__ = [
     "ipv6",
     "isin",
     "jcb",
-    "length",
     "mac_address",
     "mastercard",
     "md5",

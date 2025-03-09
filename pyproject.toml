@@ -29,6 +29,10 @@ repository = "https://github.com/d-chris/click-validators"
 python = "^3.9"
 click = "^8.1.8"
 validators = "^0.34.0"
+eth-hash = { version = ">=0.7.0", extras = [ "pycryptodome" ], optional = true }
+
+[tool.poetry.extras]
+crypto-eth-addresses = [ "eth-hash" ]
 
 [tool.poetry.group.dev.dependencies]
 jinja2 = "^3.1.6"
@@ -37,6 +41,11 @@ black = "^25.1.0"
 [tool.poetry.group.docs.dependencies]
 pdoc = "^15.0.1"
 pathlibutil = "^0.3.5"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.0.0"
+pytest-randomly = "^3.16.0"
 
 [[tool.poetry.source]]
 name = "PyPI"
@@ -49,3 +58,15 @@ priority = "explicit"
 
 [tool.isort]
 profile = "black"
+
+[tool.coverage.report]
+exclude_lines = [
+  "@overload",
+]
+
+[tool.coverage.run]
+omit = [
+  "*/__main__.py",
+  "*/tests/*",
+  "*/docs/*",
+]

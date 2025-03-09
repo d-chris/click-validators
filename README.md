@@ -9,7 +9,6 @@ Additional `click` parameter types are built on top of the `validators` library,
 - `clicktypes.base32()`
 - `clicktypes.base58()`
 - `clicktypes.base64()`
-- `clicktypes.between()`
 - `clicktypes.bsc_address()`
 - `clicktypes.btc_address()`
 - `clicktypes.calling_code()`
@@ -39,7 +38,6 @@ Additional `click` parameter types are built on top of the `validators` library,
 - `clicktypes.ipv6()`
 - `clicktypes.isin()`
 - `clicktypes.jcb()`
-- `clicktypes.length()`
 - `clicktypes.mac_address()`
 - `clicktypes.mastercard()`
 - `clicktypes.md5()`
@@ -60,6 +58,12 @@ Additional `click` parameter types are built on top of the `validators` library,
 
 ```cmd
 pip install click-validators
+```
+
+to perform `validators.eth_address()` validation, you need to install the `eth-hash` package.
+
+```cmd
+pip install click-validators[crypto-eth-addresses]
 ```
 
 ## Usage
