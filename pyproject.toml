@@ -35,6 +35,7 @@ eth-hash = { version = ">=0.7.0", extras = [ "pycryptodome" ], optional = true }
 
 [tool.poetry.extras]
 crypto-eth-addresses = [ "eth-hash" ]
+eth = [ "eth-hash" ]
 
 [tool.poetry.group.dev.dependencies]
 jinja2 = "^3.1.6"
@@ -74,13 +75,7 @@ addopts = [
 ]
 
 [tool.coverage.report]
-exclude_lines = [
-  "@overload",
-]
+exclude_lines = [ "@overload" ]
 
 [tool.coverage.run]
-omit = [
-  "*/__main__.py",
-  "*/tests/*",
-  "*/docs/*",
-]
+omit = [ "*/__main__.py", "*/tests/*", "*/docs/*" ]

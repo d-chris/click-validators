@@ -58,7 +58,6 @@ def main() -> int:
 
             modules = [
                 "clicktypes",
-                "click",
                 "click.types",
                 "validators",
             ]

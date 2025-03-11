@@ -2,7 +2,7 @@
 .. include:: ../README.md
 """
 
-from typing import overload
+from typing import Optional
 
 import click
 import validators
@@ -10,13 +10,27 @@ import validators
 from .decorator import click_validatortype
 
 {% for validator in validators %}
-@overload
-def {{ validator.name }}({{ validator.params }}) -> click.ParamType:
-    """{{ validator.docstring }}"""
-    ...
 
-{{ validator.name }} = click_validatortype(validators.{{ validator.name }})
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.{{ validator.name }}` function."""
+{% if validator.params %}
+def {{ validator.name }}(
+    *,
+    {{ validator.params }}
+) -> click.ParamType:
+    """
+    {{ validator.docstring }}
+
+    Returns a `click.ParamType` instance which wraps `validators.{{ validator.name }}`.
+    """
+    return click_validatortype(validators.{{ validator.name }})(**locals())
+{% else %}
+def {{ validator.name }}() -> click.ParamType:
+    """
+    {{ validator.docstring }}
+
+    Returns a `click.ParamType` instance which wraps `validators.{{ validator.name }}`.
+    """
+    return click_validatortype(validators.{{ validator.name }})()
+{% endif %}
 {% endfor %}
 
 __all__ = [

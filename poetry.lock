@@ -763,8 +763,9 @@ type = ["pytest-mypy"]
 
 [extras]
 crypto-eth-addresses = ["eth-hash"]
+eth = ["eth-hash"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.1"
-content-hash = "c7ee50f37cb129956dcaaf81167b769d3ab5927bff5ff195124c05d9734ee2f2"
+content-hash = "b11583a7e3b0f20fc109ffa0013aa1ad5a9762bad2349d3da249a489d08be7f1"

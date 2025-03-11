@@ -11,7 +11,7 @@ def docstrings() -> Generator[str, None, None]:
     """docstrings from all clicktypes validators."""
 
     yield from (
-        inspect.getdoc(getattr(validators, validator))
+        inspect.getdoc(getattr(validators, validator)) or ""
         for validator in clicktypes.__all__
         if validator not in ("base58", "country_code")
     )
