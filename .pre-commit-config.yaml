@@ -1,4 +1,12 @@
 repos:
+  - repo: local
+    hooks:
+      - id: clicktypes
+        name: render clicktypes/__init__.py
+        entry: poetry run python -m clicktypes
+        language: system
+        pass_filenames: false
+        always_run: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -45,11 +53,14 @@ repos:
     hooks:
       - id: flake8
         args: ["--max-line-length", "88", "--ignore=E501"]
-  - repo: local
+        language_version: python3.8
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.19.1
     hooks:
-      - id: clicktypes
-        name: render clicktypes/__init__.py
-        entry: poetry run python -m clicktypes
-        language: system
-        pass_filenames: false
-        always_run: true
+      - id: pyupgrade
+        args: ["--py38-plus"]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.14.1
+    hooks:
+      - id: mypy
+        language_version: python3.8

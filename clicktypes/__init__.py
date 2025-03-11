@@ -2,7 +2,7 @@
 .. include:: ../README.md
 """
 
-from typing import overload
+from typing import Optional
 
 import click
 import validators
@@ -10,519 +10,500 @@ import validators
 from .decorator import click_validatortype
 
 
-@overload
 def amex() -> click.ParamType:
-    """Return whether or not given value is a valid American Express card number."""
-    ...
+    """
+    Return whether or not given value is a valid American Express card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.amex`.
+    """
+    return click_validatortype(validators.amex)()
 
 
-amex = click_validatortype(validators.amex)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.amex` function."""
-
-
-@overload
 def base16() -> click.ParamType:
-    """Return whether or not given value is a valid base16 encoding."""
-    ...
+    """
+    Return whether or not given value is a valid base16 encoding.
+
+    Returns a `click.ParamType` instance which wraps `validators.base16`.
+    """
+    return click_validatortype(validators.base16)()
 
 
-base16 = click_validatortype(validators.base16)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base16` function."""
-
-
-@overload
 def base32() -> click.ParamType:
-    """Return whether or not given value is a valid base32 encoding."""
-    ...
+    """
+    Return whether or not given value is a valid base32 encoding.
+
+    Returns a `click.ParamType` instance which wraps `validators.base32`.
+    """
+    return click_validatortype(validators.base32)()
 
 
-base32 = click_validatortype(validators.base32)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base32` function."""
-
-
-@overload
 def base58() -> click.ParamType:
-    """Return whether or not given value is a valid base58 encoding."""
-    ...
+    """
+    Return whether or not given value is a valid base58 encoding.
+
+    Returns a `click.ParamType` instance which wraps `validators.base58`.
+    """
+    return click_validatortype(validators.base58)()
 
 
-base58 = click_validatortype(validators.base58)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base58` function."""
-
-
-@overload
 def base64() -> click.ParamType:
-    """Return whether or not given value is a valid base64 encoding."""
-    ...
+    """
+    Return whether or not given value is a valid base64 encoding.
+
+    Returns a `click.ParamType` instance which wraps `validators.base64`.
+    """
+    return click_validatortype(validators.base64)()
 
 
-base64 = click_validatortype(validators.base64)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.base64` function."""
-
-
-@overload
 def bsc_address() -> click.ParamType:
-    """Return whether or not given value is a valid binance smart chain address."""
-    ...
+    """
+    Return whether or not given value is a valid binance smart chain address.
+
+    Returns a `click.ParamType` instance which wraps `validators.bsc_address`.
+    """
+    return click_validatortype(validators.bsc_address)()
 
 
-bsc_address = click_validatortype(validators.bsc_address)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.bsc_address` function."""
-
-
-@overload
 def btc_address() -> click.ParamType:
-    """Return whether or not given value is a valid bitcoin address."""
-    ...
+    """
+    Return whether or not given value is a valid bitcoin address.
+
+    Returns a `click.ParamType` instance which wraps `validators.btc_address`.
+    """
+    return click_validatortype(validators.btc_address)()
 
 
-btc_address = click_validatortype(validators.btc_address)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.btc_address` function."""
-
-
-@overload
 def calling_code() -> click.ParamType:
-    """Validates given calling code."""
-    ...
+    """
+    Validates given calling code.
+
+    Returns a `click.ParamType` instance which wraps `validators.calling_code`.
+    """
+    return click_validatortype(validators.calling_code)()
 
 
-calling_code = click_validatortype(validators.calling_code)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.calling_code` function."""
-
-
-@overload
 def card_number() -> click.ParamType:
-    """Return whether or not given value is a valid generic card number."""
-    ...
+    """
+    Return whether or not given value is a valid generic card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.card_number`.
+    """
+    return click_validatortype(validators.card_number)()
 
 
-card_number = click_validatortype(validators.card_number)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.card_number` function."""
+def country_code(
+    *,
+    iso_format: str = "auto",
+    ignore_case: bool = False,
+) -> click.ParamType:
+    """
+    Validates given country code.
+
+    Returns a `click.ParamType` instance which wraps `validators.country_code`.
+    """
+    return click_validatortype(validators.country_code)(**locals())
 
 
-@overload
-def country_code(iso_format="auto", ignore_case=False) -> click.ParamType:
-    """Validates given country code."""
-    ...
-
-
-country_code = click_validatortype(validators.country_code)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.country_code` function."""
-
-
-@overload
 def cron() -> click.ParamType:
-    """Return whether or not given value is a valid cron string."""
-    ...
+    """
+    Return whether or not given value is a valid cron string.
+
+    Returns a `click.ParamType` instance which wraps `validators.cron`.
+    """
+    return click_validatortype(validators.cron)()
 
 
-cron = click_validatortype(validators.cron)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.cron` function."""
+def currency(
+    *,
+    skip_symbols: bool = True,
+    ignore_case: bool = False,
+) -> click.ParamType:
+    """
+    Validates given currency code.
+
+    Returns a `click.ParamType` instance which wraps `validators.currency`.
+    """
+    return click_validatortype(validators.currency)(**locals())
 
 
-@overload
-def currency(skip_symbols=True, ignore_case=False) -> click.ParamType:
-    """Validates given currency code."""
-    ...
-
-
-currency = click_validatortype(validators.currency)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.currency` function."""
-
-
-@overload
 def cusip() -> click.ParamType:
-    """Return whether or not given value is a valid CUSIP."""
-    ...
+    """
+    Return whether or not given value is a valid CUSIP.
+
+    Returns a `click.ParamType` instance which wraps `validators.cusip`.
+    """
+    return click_validatortype(validators.cusip)()
 
 
-cusip = click_validatortype(validators.cusip)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.cusip` function."""
-
-
-@overload
 def diners() -> click.ParamType:
-    """Return whether or not given value is a valid Diners Club card number."""
-    ...
+    """
+    Return whether or not given value is a valid Diners Club card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.diners`.
+    """
+    return click_validatortype(validators.diners)()
 
 
-diners = click_validatortype(validators.diners)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.diners` function."""
-
-
-@overload
 def discover() -> click.ParamType:
-    """Return whether or not given value is a valid Discover card number."""
-    ...
+    """
+    Return whether or not given value is a valid Discover card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.discover`.
+    """
+    return click_validatortype(validators.discover)()
 
 
-discover = click_validatortype(validators.discover)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.discover` function."""
+def domain(
+    *,
+    consider_tld: bool = False,
+    rfc_1034: bool = False,
+    rfc_2782: bool = False,
+) -> click.ParamType:
+    """
+    Return whether or not given value is a valid domain.
+
+    Returns a `click.ParamType` instance which wraps `validators.domain`.
+    """
+    return click_validatortype(validators.domain)(**locals())
 
 
-@overload
-def domain(consider_tld=False, rfc_1034=False, rfc_2782=False) -> click.ParamType:
-    """Return whether or not given value is a valid domain."""
-    ...
-
-
-domain = click_validatortype(validators.domain)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.domain` function."""
-
-
-@overload
 def email(
-    ipv6_address=False,
-    ipv4_address=False,
-    simple_host=False,
-    rfc_1034=False,
-    rfc_2782=False,
+    *,
+    ipv6_address: bool = False,
+    ipv4_address: bool = False,
+    simple_host: bool = False,
+    rfc_1034: bool = False,
+    rfc_2782: bool = False,
 ) -> click.ParamType:
-    """Validate an email address."""
-    ...
+    """
+    Validate an email address.
+
+    Returns a `click.ParamType` instance which wraps `validators.email`.
+    """
+    return click_validatortype(validators.email)(**locals())
 
 
-email = click_validatortype(validators.email)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.email` function."""
-
-
-@overload
 def es_cif() -> click.ParamType:
-    """Validate a Spanish CIF."""
-    ...
+    """
+    Validate a Spanish CIF.
+
+    Returns a `click.ParamType` instance which wraps `validators.es_cif`.
+    """
+    return click_validatortype(validators.es_cif)()
 
 
-es_cif = click_validatortype(validators.es_cif)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_cif` function."""
-
-
-@overload
 def es_doi() -> click.ParamType:
-    """Validate a Spanish DOI."""
-    ...
+    """
+    Validate a Spanish DOI.
+
+    Returns a `click.ParamType` instance which wraps `validators.es_doi`.
+    """
+    return click_validatortype(validators.es_doi)()
 
 
-es_doi = click_validatortype(validators.es_doi)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_doi` function."""
-
-
-@overload
 def es_nie() -> click.ParamType:
-    """Validate a Spanish NIE."""
-    ...
+    """
+    Validate a Spanish NIE.
+
+    Returns a `click.ParamType` instance which wraps `validators.es_nie`.
+    """
+    return click_validatortype(validators.es_nie)()
 
 
-es_nie = click_validatortype(validators.es_nie)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_nie` function."""
-
-
-@overload
 def es_nif() -> click.ParamType:
-    """Validate a Spanish NIF."""
-    ...
+    """
+    Validate a Spanish NIF.
+
+    Returns a `click.ParamType` instance which wraps `validators.es_nif`.
+    """
+    return click_validatortype(validators.es_nif)()
 
 
-es_nif = click_validatortype(validators.es_nif)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.es_nif` function."""
-
-
-@overload
 def eth_address() -> click.ParamType:
-    """Return whether or not given value is a valid ethereum address."""
-    ...
+    """
+    Return whether or not given value is a valid ethereum address.
+
+    Returns a `click.ParamType` instance which wraps `validators.eth_address`.
+    """
+    return click_validatortype(validators.eth_address)()
 
 
-eth_address = click_validatortype(validators.eth_address)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.eth_address` function."""
-
-
-@overload
 def fi_business_id() -> click.ParamType:
-    """Validate a Finnish Business ID."""
-    ...
+    """
+    Validate a Finnish Business ID.
+
+    Returns a `click.ParamType` instance which wraps `validators.fi_business_id`.
+    """
+    return click_validatortype(validators.fi_business_id)()
 
 
-fi_business_id = click_validatortype(validators.fi_business_id)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fi_business_id` function."""
+def fi_ssn(
+    *,
+    allow_temporal_ssn: bool = True,
+) -> click.ParamType:
+    """
+    Validate a Finnish Social Security Number.
+
+    Returns a `click.ParamType` instance which wraps `validators.fi_ssn`.
+    """
+    return click_validatortype(validators.fi_ssn)(**locals())
 
 
-@overload
-def fi_ssn(allow_temporal_ssn=True) -> click.ParamType:
-    """Validate a Finnish Social Security Number."""
-    ...
-
-
-fi_ssn = click_validatortype(validators.fi_ssn)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fi_ssn` function."""
-
-
-@overload
 def fr_department() -> click.ParamType:
-    """Validate a french department number."""
-    ...
+    """
+    Validate a french department number.
+
+    Returns a `click.ParamType` instance which wraps `validators.fr_department`.
+    """
+    return click_validatortype(validators.fr_department)()
 
 
-fr_department = click_validatortype(validators.fr_department)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fr_department` function."""
-
-
-@overload
 def fr_ssn() -> click.ParamType:
-    """Validate a french Social Security Number."""
-    ...
+    """
+    Validate a french Social Security Number.
+
+    Returns a `click.ParamType` instance which wraps `validators.fr_ssn`.
+    """
+    return click_validatortype(validators.fr_ssn)()
 
 
-fr_ssn = click_validatortype(validators.fr_ssn)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.fr_ssn` function."""
-
-
-@overload
 def hostname(
-    skip_ipv6_addr=False,
-    skip_ipv4_addr=False,
-    may_have_port=True,
-    maybe_simple=True,
-    consider_tld=False,
-    private=None,
-    rfc_1034=False,
-    rfc_2782=False,
+    *,
+    skip_ipv6_addr: bool = False,
+    skip_ipv4_addr: bool = False,
+    may_have_port: bool = True,
+    maybe_simple: bool = True,
+    consider_tld: bool = False,
+    private: Optional[bool] = None,
+    rfc_1034: bool = False,
+    rfc_2782: bool = False,
 ) -> click.ParamType:
-    """Return whether or not given value is a valid hostname."""
-    ...
+    """
+    Return whether or not given value is a valid hostname.
+
+    Returns a `click.ParamType` instance which wraps `validators.hostname`.
+    """
+    return click_validatortype(validators.hostname)(**locals())
 
 
-hostname = click_validatortype(validators.hostname)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.hostname` function."""
-
-
-@overload
 def iban() -> click.ParamType:
-    """Return whether or not given value is a valid IBAN code."""
-    ...
+    """
+    Return whether or not given value is a valid IBAN code.
+
+    Returns a `click.ParamType` instance which wraps `validators.iban`.
+    """
+    return click_validatortype(validators.iban)()
 
 
-iban = click_validatortype(validators.iban)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.iban` function."""
-
-
-@overload
 def ind_aadhar() -> click.ParamType:
-    """Validate an indian aadhar card number."""
-    ...
+    """
+    Validate an indian aadhar card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.ind_aadhar`.
+    """
+    return click_validatortype(validators.ind_aadhar)()
 
 
-ind_aadhar = click_validatortype(validators.ind_aadhar)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ind_aadhar` function."""
-
-
-@overload
 def ind_pan() -> click.ParamType:
-    """Validate a pan card number."""
-    ...
-
-
-ind_pan = click_validatortype(validators.ind_pan)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ind_pan` function."""
-
-
-@overload
-def ipv4(cidr=True, strict=False, private=None, host_bit=True) -> click.ParamType:
-    """Returns whether a given value is a valid IPv4 address."""
-    ...
-
-
-ipv4 = click_validatortype(validators.ipv4)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ipv4` function."""
-
-
-@overload
-def ipv6(cidr=True, strict=False, host_bit=True) -> click.ParamType:
-    """Returns if a given value is a valid IPv6 address."""
-    ...
-
-
-ipv6 = click_validatortype(validators.ipv6)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.ipv6` function."""
-
-
-@overload
-def isin() -> click.ParamType:
-    """Return whether or not given value is a valid ISIN."""
-    ...
-
-
-isin = click_validatortype(validators.isin)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.isin` function."""
-
-
-@overload
-def jcb() -> click.ParamType:
-    """Return whether or not given value is a valid JCB card number."""
-    ...
-
-
-jcb = click_validatortype(validators.jcb)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.jcb` function."""
-
-
-@overload
-def mac_address() -> click.ParamType:
-    """Return whether or not given value is a valid MAC address."""
-    ...
-
-
-mac_address = click_validatortype(validators.mac_address)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.mac_address` function."""
-
-
-@overload
-def mastercard() -> click.ParamType:
-    """Return whether or not given value is a valid Mastercard card number."""
-    ...
-
-
-mastercard = click_validatortype(validators.mastercard)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.mastercard` function."""
-
-
-@overload
-def md5() -> click.ParamType:
-    """Return whether or not given value is a valid MD5 hash."""
-    ...
-
-
-md5 = click_validatortype(validators.md5)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.md5` function."""
-
-
-@overload
-def sedol() -> click.ParamType:
-    """Return whether or not given value is a valid SEDOL."""
-    ...
-
-
-sedol = click_validatortype(validators.sedol)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sedol` function."""
-
-
-@overload
-def sha1() -> click.ParamType:
-    """Return whether or not given value is a valid SHA1 hash."""
-    ...
-
-
-sha1 = click_validatortype(validators.sha1)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha1` function."""
-
-
-@overload
-def sha224() -> click.ParamType:
-    """Return whether or not given value is a valid SHA224 hash."""
-    ...
-
-
-sha224 = click_validatortype(validators.sha224)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha224` function."""
-
-
-@overload
-def sha256() -> click.ParamType:
-    """Return whether or not given value is a valid SHA256 hash."""
-    ...
-
-
-sha256 = click_validatortype(validators.sha256)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha256` function."""
-
-
-@overload
-def sha384() -> click.ParamType:
-    """Return whether or not given value is a valid SHA384 hash."""
-    ...
-
-
-sha384 = click_validatortype(validators.sha384)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha384` function."""
-
-
-@overload
-def sha512() -> click.ParamType:
-    """Return whether or not given value is a valid SHA512 hash."""
-    ...
-
-
-sha512 = click_validatortype(validators.sha512)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.sha512` function."""
-
-
-@overload
-def slug() -> click.ParamType:
-    """Validate whether or not given value is valid slug."""
-    ...
-
-
-slug = click_validatortype(validators.slug)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.slug` function."""
-
-
-@overload
-def trx_address() -> click.ParamType:
-    """Return whether or not given value is a valid tron address."""
-    ...
-
-
-trx_address = click_validatortype(validators.trx_address)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.trx_address` function."""
-
-
-@overload
-def unionpay() -> click.ParamType:
-    """Return whether or not given value is a valid UnionPay card number."""
-    ...
-
-
-unionpay = click_validatortype(validators.unionpay)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.unionpay` function."""
-
-
-@overload
-def url(
-    skip_ipv6_addr=False,
-    skip_ipv4_addr=False,
-    may_have_port=True,
-    simple_host=False,
-    strict_query=True,
-    consider_tld=False,
-    private=None,
-    rfc_1034=False,
-    rfc_2782=False,
+    """
+    Validate a pan card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.ind_pan`.
+    """
+    return click_validatortype(validators.ind_pan)()
+
+
+def ipv4(
+    *,
+    cidr: bool = True,
+    strict: bool = False,
+    private: Optional[bool] = None,
+    host_bit: bool = True,
 ) -> click.ParamType:
-    """Return whether or not given value is a valid URL."""
-    ...
+    """
+    Returns whether a given value is a valid IPv4 address.
+
+    Returns a `click.ParamType` instance which wraps `validators.ipv4`.
+    """
+    return click_validatortype(validators.ipv4)(**locals())
 
 
-url = click_validatortype(validators.url)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.url` function."""
+def ipv6(
+    *,
+    cidr: bool = True,
+    strict: bool = False,
+    host_bit: bool = True,
+) -> click.ParamType:
+    """
+    Returns if a given value is a valid IPv6 address.
+
+    Returns a `click.ParamType` instance which wraps `validators.ipv6`.
+    """
+    return click_validatortype(validators.ipv6)(**locals())
 
 
-@overload
+def isin() -> click.ParamType:
+    """
+    Return whether or not given value is a valid ISIN.
+
+    Returns a `click.ParamType` instance which wraps `validators.isin`.
+    """
+    return click_validatortype(validators.isin)()
+
+
+def jcb() -> click.ParamType:
+    """
+    Return whether or not given value is a valid JCB card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.jcb`.
+    """
+    return click_validatortype(validators.jcb)()
+
+
+def mac_address() -> click.ParamType:
+    """
+    Return whether or not given value is a valid MAC address.
+
+    Returns a `click.ParamType` instance which wraps `validators.mac_address`.
+    """
+    return click_validatortype(validators.mac_address)()
+
+
+def mastercard() -> click.ParamType:
+    """
+    Return whether or not given value is a valid Mastercard card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.mastercard`.
+    """
+    return click_validatortype(validators.mastercard)()
+
+
+def md5() -> click.ParamType:
+    """
+    Return whether or not given value is a valid MD5 hash.
+
+    Returns a `click.ParamType` instance which wraps `validators.md5`.
+    """
+    return click_validatortype(validators.md5)()
+
+
+def sedol() -> click.ParamType:
+    """
+    Return whether or not given value is a valid SEDOL.
+
+    Returns a `click.ParamType` instance which wraps `validators.sedol`.
+    """
+    return click_validatortype(validators.sedol)()
+
+
+def sha1() -> click.ParamType:
+    """
+    Return whether or not given value is a valid SHA1 hash.
+
+    Returns a `click.ParamType` instance which wraps `validators.sha1`.
+    """
+    return click_validatortype(validators.sha1)()
+
+
+def sha224() -> click.ParamType:
+    """
+    Return whether or not given value is a valid SHA224 hash.
+
+    Returns a `click.ParamType` instance which wraps `validators.sha224`.
+    """
+    return click_validatortype(validators.sha224)()
+
+
+def sha256() -> click.ParamType:
+    """
+    Return whether or not given value is a valid SHA256 hash.
+
+    Returns a `click.ParamType` instance which wraps `validators.sha256`.
+    """
+    return click_validatortype(validators.sha256)()
+
+
+def sha384() -> click.ParamType:
+    """
+    Return whether or not given value is a valid SHA384 hash.
+
+    Returns a `click.ParamType` instance which wraps `validators.sha384`.
+    """
+    return click_validatortype(validators.sha384)()
+
+
+def sha512() -> click.ParamType:
+    """
+    Return whether or not given value is a valid SHA512 hash.
+
+    Returns a `click.ParamType` instance which wraps `validators.sha512`.
+    """
+    return click_validatortype(validators.sha512)()
+
+
+def slug() -> click.ParamType:
+    """
+    Validate whether or not given value is valid slug.
+
+    Returns a `click.ParamType` instance which wraps `validators.slug`.
+    """
+    return click_validatortype(validators.slug)()
+
+
+def trx_address() -> click.ParamType:
+    """
+    Return whether or not given value is a valid tron address.
+
+    Returns a `click.ParamType` instance which wraps `validators.trx_address`.
+    """
+    return click_validatortype(validators.trx_address)()
+
+
+def unionpay() -> click.ParamType:
+    """
+    Return whether or not given value is a valid UnionPay card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.unionpay`.
+    """
+    return click_validatortype(validators.unionpay)()
+
+
+def url(
+    *,
+    skip_ipv6_addr: bool = False,
+    skip_ipv4_addr: bool = False,
+    may_have_port: bool = True,
+    simple_host: bool = False,
+    strict_query: bool = True,
+    consider_tld: bool = False,
+    private: Optional[bool] = None,
+    rfc_1034: bool = False,
+    rfc_2782: bool = False,
+) -> click.ParamType:
+    """
+    Return whether or not given value is a valid URL.
+
+    Returns a `click.ParamType` instance which wraps `validators.url`.
+    """
+    return click_validatortype(validators.url)(**locals())
+
+
 def uuid() -> click.ParamType:
-    """Return whether or not given value is a valid UUID-v4 string."""
-    ...
+    """
+    Return whether or not given value is a valid UUID-v4 string.
+
+    Returns a `click.ParamType` instance which wraps `validators.uuid`.
+    """
+    return click_validatortype(validators.uuid)()
 
 
-uuid = click_validatortype(validators.uuid)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.uuid` function."""
-
-
-@overload
 def visa() -> click.ParamType:
-    """Return whether or not given value is a valid Visa card number."""
-    ...
+    """
+    Return whether or not given value is a valid Visa card number.
 
-
-visa = click_validatortype(validators.visa)
-"""A custom parameter type derived from `click.types.ParamType` that uses the `validators.visa` function."""
+    Returns a `click.ParamType` instance which wraps `validators.visa`.
+    """
+    return click_validatortype(validators.visa)()
 
 
 __all__ = [
