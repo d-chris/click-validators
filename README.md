@@ -117,7 +117,7 @@ $ main.py fu.bar.com
 Usage: main.py [OPTIONS] EMAIL
 Try 'main.py --help' for help.
 
-Error: Invalid value for 'EMAIL': Invalid email='fu.bar.com'.
+Error: Invalid value for 'EMAIL': 'fu.bar.com'.
 ```
 
 ## Dependencies

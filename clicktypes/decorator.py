@@ -14,7 +14,7 @@ def click_validatortype(func: Callable[..., bool]) -> Type[click.ParamType]:
 
     def convert(self, value, param, ctx):
         if self._func(value) is not True:
-            self.fail(f"Invalid {self.name}='{value}'.", param, ctx)
+            self.fail(repr(value), param, ctx)
         return value
 
     return type(
