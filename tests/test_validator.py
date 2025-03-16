@@ -3,8 +3,7 @@ import pytest
 from click.testing import CliRunner
 
 import clicktypes
-
-from . import validator_data
+from tests import validator_data
 
 
 def cli(validator: str, **kwargs):
