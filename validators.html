@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="pdoc 14.7.0"/>
+    <meta name="generator" content="pdoc 15.0.3"/>
     <title>validators API documentation</title>
 
     <style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
     <style>/*! syntax-highlighting.css */pre{line-height:125%;}span.linenos{color:inherit; background-color:transparent; padding-left:5px; padding-right:20px;}.pdoc-code .hll{background-color:#49483e}.pdoc-code{background:#272822; color:#f8f8f2}.pdoc-code .c{color:#75715e}.pdoc-code .err{color:#960050; background-color:#1e0010}.pdoc-code .esc{color:#f8f8f2}.pdoc-code .g{color:#f8f8f2}.pdoc-code .k{color:#66d9ef}.pdoc-code .l{color:#ae81ff}.pdoc-code .n{color:#f8f8f2}.pdoc-code .o{color:#f92672}.pdoc-code .x{color:#f8f8f2}.pdoc-code .p{color:#f8f8f2}.pdoc-code .ch{color:#75715e}.pdoc-code .cm{color:#75715e}.pdoc-code .cp{color:#75715e}.pdoc-code .cpf{color:#75715e}.pdoc-code .c1{color:#75715e}.pdoc-code .cs{color:#75715e}.pdoc-code .gd{color:#f92672}.pdoc-code .ge{color:#f8f8f2; font-style:italic}.pdoc-code .gr{color:#f8f8f2}.pdoc-code .gh{color:#f8f8f2}.pdoc-code .gi{color:#a6e22e}.pdoc-code .go{color:#66d9ef}.pdoc-code .gp{color:#f92672; font-weight:bold}.pdoc-code .gs{color:#f8f8f2; font-weight:bold}.pdoc-code .gu{color:#75715e}.pdoc-code .gt{color:#f8f8f2}.pdoc-code .kc{color:#66d9ef}.pdoc-code .kd{color:#66d9ef}.pdoc-code .kn{color:#f92672}.pdoc-code .kp{color:#66d9ef}.pdoc-code .kr{color:#66d9ef}.pdoc-code .kt{color:#66d9ef}.pdoc-code .ld{color:#e6db74}.pdoc-code .m{color:#ae81ff}.pdoc-code .s{color:#e6db74}.pdoc-code .na{color:#a6e22e}.pdoc-code .nb{color:#f8f8f2}.pdoc-code .nc{color:#a6e22e}.pdoc-code .no{color:#66d9ef}.pdoc-code .nd{color:#a6e22e}.pdoc-code .ni{color:#f8f8f2}.pdoc-code .ne{color:#a6e22e}.pdoc-code .nf{color:#a6e22e}.pdoc-code .nl{color:#f8f8f2}.pdoc-code .nn{color:#f8f8f2}.pdoc-code .nx{color:#a6e22e}.pdoc-code .py{color:#f8f8f2}.pdoc-code .nt{color:#f92672}.pdoc-code .nv{color:#f8f8f2}.pdoc-code .ow{color:#f92672}.pdoc-code .w{color:#f8f8f2}.pdoc-code .mb{color:#ae81ff}.pdoc-code .mf{color:#ae81ff}.pdoc-code .mh{color:#ae81ff}.pdoc-code .mi{color:#ae81ff}.pdoc-code .mo{color:#ae81ff}.pdoc-code .sa{color:#e6db74}.pdoc-code .sb{color:#e6db74}.pdoc-code .sc{color:#e6db74}.pdoc-code .dl{color:#e6db74}.pdoc-code .sd{color:#e6db74}.pdoc-code .s2{color:#e6db74}.pdoc-code .se{color:#ae81ff}.pdoc-code .sh{color:#e6db74}.pdoc-code .si{color:#e6db74}.pdoc-code .sx{color:#e6db74}.pdoc-code .sr{color:#e6db74}.pdoc-code .s1{color:#e6db74}.pdoc-code .ss{color:#e6db74}.pdoc-code .bp{color:#f8f8f2}.pdoc-code .fm{color:#a6e22e}.pdoc-code .vc{color:#f8f8f2}.pdoc-code .vg{color:#f8f8f2}.pdoc-code .vi{color:#f8f8f2}.pdoc-code .vm{color:#f8f8f2}</style>
     <style>/*! theme.css */:root{--pdoc-background:#212529;}.pdoc{--text:#f7f7f7;--muted:#9d9d9d;--link:#58a6ff;--link-hover:#3989ff;--code:#333;--active:#555;--accent:#343434;--accent2:#555;--nav-hover:rgba(0, 0, 0, 0.1);--name:#77C1FF;--def:#0cdd0c;--annotation:#00c037;}</style>
     <style>/*! layout.css */html, body{width:100%;height:100%;}html, main{scroll-behavior:smooth;}body{background-color:var(--pdoc-background);}@media (max-width:769px){#navtoggle{cursor:pointer;position:absolute;width:50px;height:40px;top:1rem;right:1rem;border-color:var(--text);color:var(--text);display:flex;opacity:0.8;z-index:999;}#navtoggle:hover{opacity:1;}#togglestate + div{display:none;}#togglestate:checked + div{display:inherit;}main, header{padding:2rem 3vw;}header + main{margin-top:-3rem;}.git-button{display:none !important;}nav input[type="search"]{max-width:77%;}nav input[type="search"]:first-child{margin-top:-6px;}nav input[type="search"]:valid ~ *{display:none !important;}}@media (min-width:770px){:root{--sidebar-width:clamp(12.5rem, 28vw, 22rem);}nav{position:fixed;overflow:auto;height:100vh;width:var(--sidebar-width);}main, header{padding:3rem 2rem 3rem calc(var(--sidebar-width) + 3rem);width:calc(54rem + var(--sidebar-width));max-width:100%;}header + main{margin-top:-4rem;}#navtoggle{display:none;}}#togglestate{position:absolute;height:0;opacity:0;}nav.pdoc{--pad:clamp(0.5rem, 2vw, 1.75rem);--indent:1.5rem;background-color:var(--accent);border-right:1px solid var(--accent2);box-shadow:0 0 20px rgba(50, 50, 50, .2) inset;padding:0 0 0 var(--pad);overflow-wrap:anywhere;scrollbar-width:thin; scrollbar-color:var(--accent2) transparent; z-index:1}nav.pdoc::-webkit-scrollbar{width:.4rem; }nav.pdoc::-webkit-scrollbar-thumb{background-color:var(--accent2); }nav.pdoc > div{padding:var(--pad) 0;}nav.pdoc .module-list-button{display:inline-flex;align-items:center;color:var(--text);border-color:var(--muted);margin-bottom:1rem;}nav.pdoc .module-list-button:hover{border-color:var(--text);}nav.pdoc input[type=search]{display:block;outline-offset:0;width:calc(100% - var(--pad));}nav.pdoc .logo{max-width:calc(100% - var(--pad));max-height:35vh;display:block;margin:0 auto 1rem;transform:translate(calc(-.5 * var(--pad)), 0);}nav.pdoc ul{list-style:none;padding-left:0;}nav.pdoc > div > ul{margin-left:calc(0px - var(--pad));}nav.pdoc li a{padding:.2rem 0 .2rem calc(var(--pad) + var(--indent));}nav.pdoc > div > ul > li > a{padding-left:var(--pad);}nav.pdoc li{transition:all 100ms;}nav.pdoc li:hover{background-color:var(--nav-hover);}nav.pdoc a, nav.pdoc a:hover{color:var(--text);}nav.pdoc a{display:block;}nav.pdoc > h2:first-of-type{margin-top:1.5rem;}nav.pdoc .class:before{content:"class ";color:var(--muted);}nav.pdoc .function:after{content:"()";color:var(--muted);}nav.pdoc footer:before{content:"";display:block;width:calc(100% - var(--pad));border-top:solid var(--accent2) 1px;margin-top:1.5rem;padding-top:.5rem;}nav.pdoc footer{font-size:small;}</style>
-    <style>/*! content.css */.pdoc{color:var(--text);box-sizing:border-box;line-height:1.5;background:none;}.pdoc .pdoc-button{cursor:pointer;display:inline-block;border:solid black 1px;border-radius:2px;font-size:.75rem;padding:calc(0.5em - 1px) 1em;transition:100ms all;}.pdoc .alert{padding:1rem 1rem 1rem calc(1.5rem + 24px);border:1px solid transparent;border-radius:.25rem;background-repeat:no-repeat;background-position:.75rem center;margin-bottom:1rem;}.pdoc .alert > em{display:none;}.pdoc .alert > *:last-child{margin-bottom:0;}.pdoc .alert.note {color:#084298;background-color:#cfe2ff;border-color:#b6d4fe;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23084298%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2016A8%208%200%201%200%208%200a8%208%200%200%200%200%2016zm.93-9.412-1%204.705c-.07.34.029.533.304.533.194%200%20.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703%200-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381%202.29-.287zM8%205.5a1%201%200%201%201%200-2%201%201%200%200%201%200%202z%22/%3E%3C/svg%3E");}.pdoc .alert.warning{color:#664d03;background-color:#fff3cd;border-color:#ffecb5;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23664d03%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8.982%201.566a1.13%201.13%200%200%200-1.96%200L.165%2013.233c-.457.778.091%201.767.98%201.767h13.713c.889%200%201.438-.99.98-1.767L8.982%201.566zM8%205c.535%200%20.954.462.9.995l-.35%203.507a.552.552%200%200%201-1.1%200L7.1%205.995A.905.905%200%200%201%208%205zm.002%206a1%201%200%201%201%200%202%201%201%200%200%201%200-2z%22/%3E%3C/svg%3E");}.pdoc .alert.danger{color:#842029;background-color:#f8d7da;border-color:#f5c2c7;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23842029%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5.52.359A.5.5%200%200%201%206%200h4a.5.5%200%200%201%20.474.658L8.694%206H12.5a.5.5%200%200%201%20.395.807l-7%209a.5.5%200%200%201-.873-.454L6.823%209.5H3.5a.5.5%200%200%201-.48-.641l2.5-8.5z%22/%3E%3C/svg%3E");}.pdoc .visually-hidden{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;margin:-1px !important;overflow:hidden !important;clip:rect(0, 0, 0, 0) !important;white-space:nowrap !important;border:0 !important;}.pdoc h1, .pdoc h2, .pdoc h3{font-weight:300;margin:.3em 0;padding:.2em 0;}.pdoc > section:not(.module-info) h1{font-size:1.5rem;font-weight:500;}.pdoc > section:not(.module-info) h2{font-size:1.4rem;font-weight:500;}.pdoc > section:not(.module-info) h3{font-size:1.3rem;font-weight:500;}.pdoc > section:not(.module-info) h4{font-size:1.2rem;}.pdoc > section:not(.module-info) h5{font-size:1.1rem;}.pdoc a{text-decoration:none;color:var(--link);}.pdoc a:hover{color:var(--link-hover);}.pdoc blockquote{margin-left:2rem;}.pdoc pre{border-top:1px solid var(--accent2);border-bottom:1px solid var(--accent2);margin-top:0;margin-bottom:1em;padding:.5rem 0 .5rem .5rem;overflow-x:auto;background-color:var(--code);}.pdoc code{color:var(--text);padding:.2em .4em;margin:0;font-size:85%;background-color:var(--accent);border-radius:6px;}.pdoc a > code{color:inherit;}.pdoc pre > code{display:inline-block;font-size:inherit;background:none;border:none;padding:0;}.pdoc > section:not(.module-info){margin-bottom:1.5rem;}.pdoc .modulename{margin-top:0;font-weight:bold;}.pdoc .modulename a{color:var(--link);transition:100ms all;}.pdoc .git-button{float:right;border:solid var(--link) 1px;}.pdoc .git-button:hover{background-color:var(--link);color:var(--pdoc-background);}.view-source-toggle-state,.view-source-toggle-state ~ .pdoc-code{display:none;}.view-source-toggle-state:checked ~ .pdoc-code{display:block;}.view-source-button{display:inline-block;float:right;font-size:.75rem;line-height:1.5rem;color:var(--muted);padding:0 .4rem 0 1.3rem;cursor:pointer;text-indent:-2px;}.view-source-button > span{visibility:hidden;}.module-info .view-source-button{float:none;display:flex;justify-content:flex-end;margin:-1.2rem .4rem -.2rem 0;}.view-source-button::before{position:absolute;content:"View Source";display:list-item;list-style-type:disclosure-closed;}.view-source-toggle-state:checked ~ .attr .view-source-button::before,.view-source-toggle-state:checked ~ .view-source-button::before{list-style-type:disclosure-open;}.pdoc .docstring{margin-bottom:1.5rem;}.pdoc section:not(.module-info) .docstring{margin-left:clamp(0rem, 5vw - 2rem, 1rem);}.pdoc .docstring .pdoc-code{margin-left:1em;margin-right:1em;}.pdoc h1:target,.pdoc h2:target,.pdoc h3:target,.pdoc h4:target,.pdoc h5:target,.pdoc h6:target,.pdoc .pdoc-code > pre > span:target{background-color:var(--active);box-shadow:-1rem 0 0 0 var(--active);}.pdoc .pdoc-code > pre > span:target{display:block;}.pdoc div:target > .attr,.pdoc section:target > .attr,.pdoc dd:target > a{background-color:var(--active);}.pdoc *{scroll-margin:2rem;}.pdoc .pdoc-code .linenos{user-select:none;}.pdoc .attr:hover{filter:contrast(0.95);}.pdoc section, .pdoc .classattr{position:relative;}.pdoc .headerlink{--width:clamp(1rem, 3vw, 2rem);position:absolute;top:0;left:calc(0rem - var(--width));transition:all 100ms ease-in-out;opacity:0;}.pdoc .headerlink::before{content:"#";display:block;text-align:center;width:var(--width);height:2.3rem;line-height:2.3rem;font-size:1.5rem;}.pdoc .attr:hover ~ .headerlink,.pdoc *:target > .headerlink,.pdoc .headerlink:hover{opacity:1;}.pdoc .attr{display:block;margin:.5rem 0 .5rem;padding:.4rem .4rem .4rem 1rem;background-color:var(--accent);overflow-x:auto;}.pdoc .classattr{margin-left:2rem;}.pdoc .name{color:var(--name);font-weight:bold;}.pdoc .def{color:var(--def);font-weight:bold;}.pdoc .signature{background-color:transparent;}.pdoc .param, .pdoc .return-annotation{white-space:pre;}.pdoc .signature.multiline .param{display:block;}.pdoc .signature.condensed .param{display:inline-block;}.pdoc .annotation{color:var(--annotation);}.pdoc .view-value-toggle-state,.pdoc .view-value-toggle-state ~ .default_value{display:none;}.pdoc .view-value-toggle-state:checked ~ .default_value{display:inherit;}.pdoc .view-value-button{font-size:.5rem;vertical-align:middle;border-style:dashed;margin-top:-0.1rem;}.pdoc .view-value-button:hover{background:white;}.pdoc .view-value-button::before{content:"show";text-align:center;width:2.2em;display:inline-block;}.pdoc .view-value-toggle-state:checked ~ .view-value-button::before{content:"hide";}.pdoc .inherited{margin-left:2rem;}.pdoc .inherited dt{font-weight:700;}.pdoc .inherited dt, .pdoc .inherited dd{display:inline;margin-left:0;margin-bottom:.5rem;}.pdoc .inherited dd:not(:last-child):after{content:", ";}.pdoc .inherited .class:before{content:"class ";}.pdoc .inherited .function a:after{content:"()";}.pdoc .search-result .docstring{overflow:auto;max-height:25vh;}.pdoc .search-result.focused > .attr{background-color:var(--active);}.pdoc .attribution{margin-top:2rem;display:block;opacity:0.5;transition:all 200ms;filter:grayscale(100%);}.pdoc .attribution:hover{opacity:1;filter:grayscale(0%);}.pdoc .attribution img{margin-left:5px;height:35px;vertical-align:middle;width:70px;transition:all 200ms;}.pdoc table{display:block;width:max-content;max-width:100%;overflow:auto;margin-bottom:1rem;}.pdoc table th{font-weight:600;}.pdoc table th, .pdoc table td{padding:6px 13px;border:1px solid var(--accent2);}</style>
+    <style>/*! content.css */.pdoc{color:var(--text);box-sizing:border-box;line-height:1.5;background:none;}.pdoc .pdoc-button{cursor:pointer;display:inline-block;border:solid black 1px;border-radius:2px;font-size:.75rem;padding:calc(0.5em - 1px) 1em;transition:100ms all;}.pdoc .alert{padding:1rem 1rem 1rem calc(1.5rem + 24px);border:1px solid transparent;border-radius:.25rem;background-repeat:no-repeat;background-position:.75rem center;margin-bottom:1rem;}.pdoc .alert > em{display:none;}.pdoc .alert > *:last-child{margin-bottom:0;}.pdoc .alert.note{color:#084298;background-color:#cfe2ff;border-color:#b6d4fe;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23084298%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2016A8%208%200%201%200%208%200a8%208%200%200%200%200%2016zm.93-9.412-1%204.705c-.07.34.029.533.304.533.194%200%20.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703%200-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381%202.29-.287zM8%205.5a1%201%200%201%201%200-2%201%201%200%200%201%200%202z%22/%3E%3C/svg%3E");}.pdoc .alert.tip{color:#0a3622;background-color:#d1e7dd;border-color:#a3cfbb;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%230a3622%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2%206a6%206%200%201%201%2010.174%204.31c-.203.196-.359.4-.453.619l-.762%201.769A.5.5%200%200%201%2010.5%2013a.5.5%200%200%201%200%201%20.5.5%200%200%201%200%201l-.224.447a1%201%200%200%201-.894.553H6.618a1%201%200%200%201-.894-.553L5.5%2015a.5.5%200%200%201%200-1%20.5.5%200%200%201%200-1%20.5.5%200%200%201-.46-.302l-.761-1.77a2%202%200%200%200-.453-.618A5.98%205.98%200%200%201%202%206m6-5a5%205%200%200%200-3.479%208.592c.263.254.514.564.676.941L5.83%2012h4.342l.632-1.467c.162-.377.413-.687.676-.941A5%205%200%200%200%208%201%22/%3E%3C/svg%3E");}.pdoc .alert.important{color:#055160;background-color:#cff4fc;border-color:#9eeaf9;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23055160%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2%200a2%202%200%200%200-2%202v12a2%202%200%200%200%202%202h12a2%202%200%200%200%202-2V2a2%202%200%200%200-2-2zm6%204c.535%200%20.954.462.9.995l-.35%203.507a.552.552%200%200%201-1.1%200L7.1%204.995A.905.905%200%200%201%208%204m.002%206a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E");}.pdoc .alert.warning{color:#664d03;background-color:#fff3cd;border-color:#ffecb5;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23664d03%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8.982%201.566a1.13%201.13%200%200%200-1.96%200L.165%2013.233c-.457.778.091%201.767.98%201.767h13.713c.889%200%201.438-.99.98-1.767L8.982%201.566zM8%205c.535%200%20.954.462.9.995l-.35%203.507a.552.552%200%200%201-1.1%200L7.1%205.995A.905.905%200%200%201%208%205zm.002%206a1%201%200%201%201%200%202%201%201%200%200%201%200-2z%22/%3E%3C/svg%3E");}.pdoc .alert.caution{color:#842029;background-color:#f8d7da;border-color:#f5c2c7;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23842029%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M11.46.146A.5.5%200%200%200%2011.107%200H4.893a.5.5%200%200%200-.353.146L.146%204.54A.5.5%200%200%200%200%204.893v6.214a.5.5%200%200%200%20.146.353l4.394%204.394a.5.5%200%200%200%20.353.146h6.214a.5.5%200%200%200%20.353-.146l4.394-4.394a.5.5%200%200%200%20.146-.353V4.893a.5.5%200%200%200-.146-.353zM8%204c.535%200%20.954.462.9.995l-.35%203.507a.552.552%200%200%201-1.1%200L7.1%204.995A.905.905%200%200%201%208%204m.002%206a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E");}.pdoc .alert.danger{color:#842029;background-color:#f8d7da;border-color:#f5c2c7;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%23842029%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5.52.359A.5.5%200%200%201%206%200h4a.5.5%200%200%201%20.474.658L8.694%206H12.5a.5.5%200%200%201%20.395.807l-7%209a.5.5%200%200%201-.873-.454L6.823%209.5H3.5a.5.5%200%200%201-.48-.641l2.5-8.5z%22/%3E%3C/svg%3E");}.pdoc .visually-hidden{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;margin:-1px !important;overflow:hidden !important;clip:rect(0, 0, 0, 0) !important;white-space:nowrap !important;border:0 !important;}.pdoc h1, .pdoc h2, .pdoc h3{font-weight:300;margin:.3em 0;padding:.2em 0;}.pdoc > section:not(.module-info) h1{font-size:1.5rem;font-weight:500;}.pdoc > section:not(.module-info) h2{font-size:1.4rem;font-weight:500;}.pdoc > section:not(.module-info) h3{font-size:1.3rem;font-weight:500;}.pdoc > section:not(.module-info) h4{font-size:1.2rem;}.pdoc > section:not(.module-info) h5{font-size:1.1rem;}.pdoc a{text-decoration:none;color:var(--link);}.pdoc a:hover{color:var(--link-hover);}.pdoc blockquote{margin-left:2rem;}.pdoc pre{border-top:1px solid var(--accent2);border-bottom:1px solid var(--accent2);margin-top:0;margin-bottom:1em;padding:.5rem 0 .5rem .5rem;overflow-x:auto;background-color:var(--code);}.pdoc code{color:var(--text);padding:.2em .4em;margin:0;font-size:85%;background-color:var(--accent);border-radius:6px;}.pdoc a > code{color:inherit;}.pdoc pre > code{display:inline-block;font-size:inherit;background:none;border:none;padding:0;}.pdoc > section:not(.module-info){margin-bottom:1.5rem;}.pdoc .modulename{margin-top:0;font-weight:bold;}.pdoc .modulename a{color:var(--link);transition:100ms all;}.pdoc .git-button{float:right;border:solid var(--link) 1px;}.pdoc .git-button:hover{background-color:var(--link);color:var(--pdoc-background);}.view-source-toggle-state,.view-source-toggle-state ~ .pdoc-code{display:none;}.view-source-toggle-state:checked ~ .pdoc-code{display:block;}.view-source-button{display:inline-block;float:right;font-size:.75rem;line-height:1.5rem;color:var(--muted);padding:0 .4rem 0 1.3rem;cursor:pointer;text-indent:-2px;}.view-source-button > span{visibility:hidden;}.module-info .view-source-button{float:none;display:flex;justify-content:flex-end;margin:-1.2rem .4rem -.2rem 0;}.view-source-button::before{position:absolute;content:"View Source";display:list-item;list-style-type:disclosure-closed;}.view-source-toggle-state:checked ~ .attr .view-source-button::before,.view-source-toggle-state:checked ~ .view-source-button::before{list-style-type:disclosure-open;}.pdoc .docstring{margin-bottom:1.5rem;}.pdoc section:not(.module-info) .docstring{margin-left:clamp(0rem, 5vw - 2rem, 1rem);}.pdoc .docstring .pdoc-code{margin-left:1em;margin-right:1em;}.pdoc h1:target,.pdoc h2:target,.pdoc h3:target,.pdoc h4:target,.pdoc h5:target,.pdoc h6:target,.pdoc .pdoc-code > pre > span:target{background-color:var(--active);box-shadow:-1rem 0 0 0 var(--active);}.pdoc .pdoc-code > pre > span:target{display:block;}.pdoc div:target > .attr,.pdoc section:target > .attr,.pdoc dd:target > a{background-color:var(--active);}.pdoc *{scroll-margin:2rem;}.pdoc .pdoc-code .linenos{user-select:none;}.pdoc .attr:hover{filter:contrast(0.95);}.pdoc section, .pdoc .classattr{position:relative;}.pdoc .headerlink{--width:clamp(1rem, 3vw, 2rem);position:absolute;top:0;left:calc(0rem - var(--width));transition:all 100ms ease-in-out;opacity:0;}.pdoc .headerlink::before{content:"#";display:block;text-align:center;width:var(--width);height:2.3rem;line-height:2.3rem;font-size:1.5rem;}.pdoc .attr:hover ~ .headerlink,.pdoc *:target > .headerlink,.pdoc .headerlink:hover{opacity:1;}.pdoc .attr{display:block;margin:.5rem 0 .5rem;padding:.4rem .4rem .4rem 1rem;background-color:var(--accent);overflow-x:auto;}.pdoc .classattr{margin-left:2rem;}.pdoc .decorator-deprecated{color:#842029;}.pdoc .decorator-deprecated ~ span{filter:grayscale(1) opacity(0.8);}.pdoc .name{color:var(--name);font-weight:bold;}.pdoc .def{color:var(--def);font-weight:bold;}.pdoc .signature{background-color:transparent;}.pdoc .param, .pdoc .return-annotation{white-space:pre;}.pdoc .signature.multiline .param{display:block;}.pdoc .signature.condensed .param{display:inline-block;}.pdoc .annotation{color:var(--annotation);}.pdoc .view-value-toggle-state,.pdoc .view-value-toggle-state ~ .default_value{display:none;}.pdoc .view-value-toggle-state:checked ~ .default_value{display:inherit;}.pdoc .view-value-button{font-size:.5rem;vertical-align:middle;border-style:dashed;margin-top:-0.1rem;}.pdoc .view-value-button:hover{background:white;}.pdoc .view-value-button::before{content:"show";text-align:center;width:2.2em;display:inline-block;}.pdoc .view-value-toggle-state:checked ~ .view-value-button::before{content:"hide";}.pdoc .inherited{margin-left:2rem;}.pdoc .inherited dt{font-weight:700;}.pdoc .inherited dt, .pdoc .inherited dd{display:inline;margin-left:0;margin-bottom:.5rem;}.pdoc .inherited dd:not(:last-child):after{content:", ";}.pdoc .inherited .class:before{content:"class ";}.pdoc .inherited .function a:after{content:"()";}.pdoc .search-result .docstring{overflow:auto;max-height:25vh;}.pdoc .search-result.focused > .attr{background-color:var(--active);}.pdoc .attribution{margin-top:2rem;display:block;opacity:0.5;transition:all 200ms;filter:grayscale(100%);}.pdoc .attribution:hover{opacity:1;filter:grayscale(0%);}.pdoc .attribution img{margin-left:5px;height:35px;vertical-align:middle;width:70px;transition:all 200ms;}.pdoc table{display:block;width:max-content;max-width:100%;overflow:auto;margin-bottom:1rem;}.pdoc table th{font-weight:600;}.pdoc table th, .pdoc table td{padding:6px 13px;border:1px solid var(--accent2);}</style>
     <style>/*! custom.css */</style></head>
 <body>
     <nav class="pdoc">
@@ -72,10 +72,13 @@
                     <a class="function" href="#mastercard">mastercard</a>
             </li>
             <li>
+                    <a class="function" href="#unionpay">unionpay</a>
+            </li>
+            <li>
                     <a class="function" href="#visa">visa</a>
             </li>
             <li>
-                    <a class="function" href="#unionpay">unionpay</a>
+                    <a class="function" href="#mir">mir</a>
             </li>
             <li>
                     <a class="function" href="#calling_code">calling_code</a>
@@ -168,6 +171,9 @@
                     <a class="function" href="#ind_pan">ind_pan</a>
             </li>
             <li>
+                    <a class="function" href="#ru_inn">ru_inn</a>
+            </li>
+            <li>
                     <a class="function" href="#iban">iban</a>
             </li>
             <li>
@@ -231,7 +237,7 @@ validators    </h1>
             </section>
                 <section id="between">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">between</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="o">~</span><span class="n">PossibleValueTypes</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">min_val</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="o">~</span><span class="n">PossibleValueTypes</span><span class="p">,</span> <span class="n">validators</span><span class="o">.</span><span class="n">_extremes</span><span class="o">.</span><span class="n">AbsMin</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">max_val</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="o">~</span><span class="n">PossibleValueTypes</span><span class="p">,</span> <span class="n">validators</span><span class="o">.</span><span class="n">_extremes</span><span class="o">.</span><span class="n">AbsMax</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></span><span class="return-annotation">):</span></span>
@@ -251,28 +257,16 @@ not just integers. This validator is originally based on <a href="https://github
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mf">13.2</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbetween-args&quot;&gt;Output: ValidationError(func=between, args=...)&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mf">13.2</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="go">ValidationError(func=between, args={&#39;value&#39;: 500, &#39;max_val&#39;: 400})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">between</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
 <span class="gp">... </span>    <span class="n">min_val</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1999</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
 <span class="gp">... </span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+<span class="go">True</span>
 </code></pre>
   </div>
 </blockquote>
@@ -315,7 +309,7 @@ If not provided, maximum value will not be checked.</li>
                 </section>
                 <section id="bsc_address">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">bsc_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -333,13 +327,9 @@ If not provided, maximum value will not be checked.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">bsc_address</span><span class="p">(</span><span class="s1">&#39;0x4e5acf9684652BEa56F2f01b7101a225Ee33d23f&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">bsc_address</span><span class="p">(</span><span class="s1">&#39;0x4g5acf9684652BEa56F2f01b7101a225Eh33d23z&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbsc_address-args&quot;&gt;Output: ValidationError(func=bsc_address, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bsc_address</span><span class="p">(</span><span class="s1">&#39;0x4g5acf9684652BEa56F2f01b7101a225Eh33d23z&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=bsc_address, args={&#39;value&#39;: &#39;0x4g5acf9684652BEa56F2f01b7101a225Eh33d23z&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -362,7 +352,7 @@ If not provided, maximum value will not be checked.</li>
                 </section>
                 <section id="btc_address">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">btc_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -382,13 +372,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">btc_address</span><span class="p">(</span><span class="s1">&#39;3Cwgr2g7vsi1bXDUkpEnVoRLA9w4FZfC69&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">btc_address</span><span class="p">(</span><span class="s1">&#39;1BvBMsEYstWetqTFn5Au4m4GFg7xJaNVN2&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbtc_address-args&quot;&gt;Output: ValidationError(func=btc_address, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">btc_address</span><span class="p">(</span><span class="s1">&#39;1BvBMsEYstWetqTFn5Au4m4GFg7xJaNVN2&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=btc_address, args={&#39;value&#39;: &#39;1BvBMsEYstWetqTFn5Au4m4GFg7xJaNVN2&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -411,7 +397,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="eth_address">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">eth_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -429,13 +415,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">eth_address</span><span class="p">(</span><span class="s1">&#39;0x9cc14ba4f9f68ca159ea4ebf2c292a808aaeb598&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">eth_address</span><span class="p">(</span><span class="s1">&#39;0x8Ba1f109551bD432803012645Ac136ddd64DBa72&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunceth_address-args&quot;&gt;Output: ValidationError(func=eth_address, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eth_address</span><span class="p">(</span><span class="s1">&#39;0x8Ba1f109551bD432803012645Ac136ddd64DBa72&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=eth_address, args={&#39;value&#39;: &#39;0x8Ba1f109551bD432803012645Ac136ddd64DBa72&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -458,7 +440,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="trx_address">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">trx_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -476,13 +458,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">trx_address</span><span class="p">(</span><span class="s1">&#39;TLjfbTbpZYDQ4EoA4N5CLNgGjfbF8ZWz38&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">trx_address</span><span class="p">(</span><span class="s1">&#39;TR2G7Rm4vFqF8EpY4U5xdLdQ7XgJ2U8Vd&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunctrx_address-args&quot;&gt;Output: ValidationError(func=trx_address, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trx_address</span><span class="p">(</span><span class="s1">&#39;TR2G7Rm4vFqF8EpY4U5xdLdQ7XgJ2U8Vd&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=trx_address, args={&#39;value&#39;: &#39;TR2G7Rm4vFqF8EpY4U5xdLdQ7XgJ2U8Vd&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -505,7 +483,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="amex">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">amex</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -521,13 +499,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">amex</span><span class="p">(</span><span class="s1">&#39;378282246310005&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">amex</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncamex-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=amex, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">amex</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=amex, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -550,7 +524,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="card_number">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">card_number</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -568,13 +542,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">card_number</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">card_number</span><span class="p">(</span><span class="s1">&#39;4242424242424241&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunccard_number-argsvalue-4242424242424241&quot;&gt;Output: ValidationError(func=card_number, args={&#39;value&#39;: &#39;4242424242424241&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">card_number</span><span class="p">(</span><span class="s1">&#39;4242424242424241&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=card_number, args={&#39;value&#39;: &#39;4242424242424241&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -597,7 +567,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="diners">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">diners</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -613,13 +583,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">diners</span><span class="p">(</span><span class="s1">&#39;3056930009020004&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">diners</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncdiners-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=diners, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">diners</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=diners, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -642,7 +608,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="discover">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">discover</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -658,13 +624,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">discover</span><span class="p">(</span><span class="s1">&#39;6011111111111117&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">discover</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncdiscover-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=discover, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">discover</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=discover, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -687,7 +649,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="jcb">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">jcb</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -703,13 +665,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">jcb</span><span class="p">(</span><span class="s1">&#39;3566002020360505&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">jcb</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncjcb-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=jcb, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jcb</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=jcb, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -732,7 +690,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="mastercard">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">mastercard</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -748,13 +706,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mastercard</span><span class="p">(</span><span class="s1">&#39;5555555555554444&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mastercard</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncmastercard-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=mastercard, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mastercard</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=mastercard, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -775,54 +729,9 @@ estimate on whether the address is valid.</p>
 
 
                 </section>
-                <section id="visa">
-                    <div class="attr function">
-                    <div class="decorator">@validator</div>
-
-        <span class="def">def</span>
-        <span class="name">visa</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
-
-        
-    </div>
-    <a class="headerlink" href="#visa"></a>
-    
-            <div class="docstring"><p>Return whether or not given value is a valid Visa card number.</p>
-
-<h6 id="examples">Examples:</h6>
-
-<blockquote>
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">visa</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">visa</span><span class="p">(</span><span class="s1">&#39;2223003122003222&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncvisa-argsvalue-2223003122003222&quot;&gt;Output: ValidationError(func=visa, args={&#39;value&#39;: &#39;2223003122003222&#39;})&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-</blockquote>
-
-<h6 id="arguments">Arguments:</h6>
-
-<ul>
-<li><strong>value:</strong>  Visa card number string to validate</li>
-</ul>
-
-<h6 id="returns">Returns:</h6>
-
-<blockquote>
-  <p>(Literal[True]): If <code>value</code> is a valid Visa card number.
-  (ValidationError): If <code>value</code> is an invalid Visa card number.</p>
-</blockquote>
-</div>
-
-
-                </section>
                 <section id="unionpay">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">unionpay</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -838,13 +747,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">unionpay</span><span class="p">(</span><span class="s1">&#39;6200000000000005&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">unionpay</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncunionpay-argsvalue-4242424242424242&quot;&gt;Output: ValidationError(func=unionpay, args={&#39;value&#39;: &#39;4242424242424242&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unionpay</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=unionpay, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -865,9 +770,91 @@ estimate on whether the address is valid.</p>
 
 
                 </section>
+                <section id="visa">
+                    <div class="attr function">
+                    <div class="decorator decorator-validator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">visa</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#visa"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid Visa card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">visa</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">visa</span><span class="p">(</span><span class="s1">&#39;2223003122003222&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=visa, args={&#39;value&#39;: &#39;2223003122003222&#39;})</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Visa card number string to validate</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Visa card number.
+  (ValidationError): If <code>value</code> is an invalid Visa card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
+                <section id="mir">
+                    <div class="attr function">
+                    <div class="decorator decorator-validator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">mir</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#mir"></a>
+    
+            <div class="docstring"><p>Return whether or not given value is a valid Mir card number.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mir</span><span class="p">(</span><span class="s1">&#39;2200123456789019&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mir</span><span class="p">(</span><span class="s1">&#39;4242424242424242&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=mir, args={&#39;value&#39;: &#39;4242424242424242&#39;})</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Mir card number string to validate.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Mir card number.
+  (ValidationError): If <code>value</code> is an invalid Mir card number.</p>
+</blockquote>
+</div>
+
+
+                </section>
                 <section id="calling_code">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">calling_code</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -885,13 +872,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">calling_code</span><span class="p">(</span><span class="s1">&#39;+91&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">calling_code</span><span class="p">(</span><span class="s1">&#39;-31&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunccalling_code-argsvalue-31&quot;&gt;Output: ValidationError(func=calling_code, args={&#39;value&#39;: &#39;-31&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calling_code</span><span class="p">(</span><span class="s1">&#39;-31&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=calling_code, args={&#39;value&#39;: &#39;-31&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -914,7 +897,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="country_code">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">country_code</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">iso_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>,</span><span class="param">	<span class="n">ignore_case</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
@@ -932,31 +915,15 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;GB&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha3&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-false&quot;&gt;Output: False&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;USA&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;840&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;numeric&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;iN&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha2&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-false-2&quot;&gt;Output: False&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;ZWE&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha3&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
+<span class="go">ValidationError(func=country_code, args={&#39;value&#39;: &#39;GB&#39;, &#39;iso_format&#39;: &#39;alpha3&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;USA&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;840&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;numeric&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;iN&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha2&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=country_code, args={&#39;value&#39;: &#39;iN&#39;, &#39;iso_format&#39;: &#39;alpha2&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">country_code</span><span class="p">(</span><span class="s1">&#39;ZWE&#39;</span><span class="p">,</span> <span class="n">iso_format</span><span class="o">=</span><span class="s1">&#39;alpha3&#39;</span><span class="p">)</span>
+<span class="go">True</span>
 </code></pre>
   </div>
 </blockquote>
@@ -982,7 +949,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="currency">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">currency</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_symbols</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">ignore_case</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
@@ -1000,13 +967,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">currency</span><span class="p">(</span><span class="s1">&#39;USD&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">currency</span><span class="p">(</span><span class="s1">&#39;ZWX&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunccurrency-argsvalue-zwx&quot;&gt;Output: ValidationError(func=currency, args={&#39;value&#39;: &#39;ZWX&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">currency</span><span class="p">(</span><span class="s1">&#39;ZWX&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=currency, args={&#39;value&#39;: &#39;ZWX&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1031,7 +994,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="cron">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">cron</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1047,13 +1010,9 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cron</span><span class="p">(</span><span class="s1">&#39;*/5 * * * *&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cron</span><span class="p">(</span><span class="s1">&#39;30-20 * * * *&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunccron&quot;&gt;Output: ValidationError(func=cron, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cron</span><span class="p">(</span><span class="s1">&#39;30-20 * * * *&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=cron, args={&#39;value&#39;: &#39;30-20 * * * *&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1076,7 +1035,7 @@ estimate on whether the address is valid.</p>
                 </section>
                 <section id="domain">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">domain</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
@@ -1092,20 +1051,12 @@ estimate on whether the address is valid.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;example.com&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;example.com/&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncdomain&quot;&gt;Output: ValidationError(func=domain, ...)&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Supports IDN domains as well::</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;example.com/&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=domain, args={&#39;value&#39;: &#39;example.com/&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Supports IDN domains as well::</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span><span class="p">(</span><span class="s1">&#39;xn----gtbspbbmkef.xn--p1ai&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
+<span class="go">True</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1140,7 +1091,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="email">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">email</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">ipv6_address</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">ipv4_address</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">simple_host</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
@@ -1159,13 +1110,9 @@ Also ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>, <a href
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">email</span><span class="p">(</span><span class="s1">&#39;someone@example.com&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">email</span><span class="p">(</span><span class="s1">&#39;bogus@@&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerroremailemail-argsvalue-bogus&quot;&gt;Output: ValidationError(email=email, args={&#39;value&#39;: &#39;bogus@@&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">email</span><span class="p">(</span><span class="s1">&#39;bogus@@&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=email, args={&#39;value&#39;: &#39;bogus@@&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1195,7 +1142,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="base16">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">base16</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1211,13 +1158,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base16</span><span class="p">(</span><span class="s1">&#39;a3f4b2&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base16</span><span class="p">(</span><span class="s1">&#39;a3f4Z1&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase16-argsvalue-a3f4z1&quot;&gt;Output: ValidationError(func=base16, args={&#39;value&#39;: &#39;a3f4Z1&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">base16</span><span class="p">(</span><span class="s1">&#39;a3f4Z1&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=base16, args={&#39;value&#39;: &#39;a3f4Z1&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1240,7 +1183,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="base32">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">base32</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1256,13 +1199,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base32</span><span class="p">(</span><span class="s1">&#39;MFZWIZLTOQ======&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base32</span><span class="p">(</span><span class="s1">&#39;MfZW3zLT9Q======&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase32-argsvalue-mfzw3zlt9q&quot;&gt;Output: ValidationError(func=base32, args={&#39;value&#39;: &#39;MfZW3zLT9Q======&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">base32</span><span class="p">(</span><span class="s1">&#39;MfZW3zLT9Q======&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=base32, args={&#39;value&#39;: &#39;MfZW3zLT9Q======&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1285,7 +1224,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="base58">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">base58</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1301,13 +1240,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base58</span><span class="p">(</span><span class="s1">&#39;14pq6y9H2DLGahPsM4s7ugsNSD2uxpHsJx&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base58</span><span class="p">(</span><span class="s1">&#39;cUSECm5YzcXJwP&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase58-argsvalue-cusecm5yzcxjwp&quot;&gt;Output: ValidationError(func=base58, args={&#39;value&#39;: &#39;cUSECm5YzcXJwP&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">base58</span><span class="p">(</span><span class="s1">&#39;cUSECm5YzcXJwP&#39;</span><span class="p">)</span>
+<span class="go">True</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1330,7 +1265,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="base64">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">base64</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1346,13 +1281,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base64</span><span class="p">(</span><span class="s1">&#39;Y2hhcmFjdGVyIHNldA==&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">base64</span><span class="p">(</span><span class="s1">&#39;cUSECm5YzcXJwP&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncbase64-argsvalue-cusecm5yzcxjwp&quot;&gt;Output: ValidationError(func=base64, args={&#39;value&#39;: &#39;cUSECm5YzcXJwP&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">base64</span><span class="p">(</span><span class="s1">&#39;cUSECm5YzcXJwP&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=base64, args={&#39;value&#39;: &#39;cUSECm5YzcXJwP&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1375,7 +1306,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="cusip">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">cusip</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
@@ -1395,7 +1326,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cusip</span><span class="p">(</span><span class="s1">&#39;037833DP2&#39;</span><span class="p">)</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cusip</span><span class="p">(</span><span class="s1">&#39;037833DP3&#39;</span><span class="p">)</span>
-<span class="go">ValidationFailure(func=cusip, ...)</span>
+<span class="go">ValidationError(func=cusip, args={&#39;value&#39;: &#39;037833DP3&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1418,7 +1349,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="isin">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">isin</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
@@ -1436,9 +1367,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">isin</span><span class="p">(</span><span class="s1">&#39;037833DP2&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<span class="go">ValidationError(func=isin, args={&#39;value&#39;: &#39;037833DP2&#39;})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">isin</span><span class="p">(</span><span class="s1">&#39;037833DP3&#39;</span><span class="p">)</span>
-<span class="go">ValidationFailure(func=isin, ...)</span>
+<span class="go">ValidationError(func=isin, args={&#39;value&#39;: &#39;037833DP3&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1461,7 +1392,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="sedol">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">sedol</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
@@ -1481,7 +1412,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sedol</span><span class="p">(</span><span class="s1">&#39;2936921&#39;</span><span class="p">)</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sedol</span><span class="p">(</span><span class="s1">&#39;29A6922&#39;</span><span class="p">)</span>
-<span class="go">ValidationFailure(func=sedol, ...)</span>
+<span class="go">ValidationError(func=sedol, args={&#39;value&#39;: &#39;29A6922&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1504,7 +1435,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="md5">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">md5</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1520,13 +1451,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;d41d8cd98f00b204e9800998ecf8427e&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncmd5-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=md5, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=md5, args={&#39;value&#39;: &#39;900zz11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1549,7 +1476,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="sha1">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">sha1</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1565,13 +1492,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1</span><span class="p">(</span><span class="s1">&#39;da39a3ee5e6b4b0d3255bfef95601890afd80709&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha1-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha1, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sha1</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=sha1, args={&#39;value&#39;: &#39;900zz11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1594,7 +1517,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="sha224">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">sha224</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1610,13 +1533,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha224</span><span class="p">(</span><span class="s1">&#39;d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha224</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha224-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha224, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sha224</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=sha224, args={&#39;value&#39;: &#39;900zz11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1639,7 +1558,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="sha256">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">sha256</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1658,13 +1577,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <span class="gp">... </span>    <span class="s1">&#39;e3b0c44298fc1c149afbf4c8996fb924&#39;</span>
 <span class="gp">... </span>    <span class="s1">&#39;27ae41e4649b934ca495991b7852b855&#39;</span>
 <span class="gp">... </span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha256</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha256-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha256, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sha256</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=sha256, args={&#39;value&#39;: &#39;900zz11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1687,7 +1602,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="sha384">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">sha384</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1706,13 +1621,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <span class="gp">... </span>    <span class="s1">&#39;cb00753f45a35e8bb5a03d699ac65007272c32ab0eded163&#39;</span>
 <span class="gp">... </span>    <span class="s1">&#39;1a8b605a43ff5bed8086072ba1e7cc2358baeca134c825a7&#39;</span>
 <span class="gp">... </span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha384</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha384-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha384, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sha384</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=sha384, args={&#39;value&#39;: &#39;900zz11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1735,7 +1646,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="sha512">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">sha512</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1755,13 +1666,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <span class="gp">... </span>    <span class="s1">&#39;9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9&#39;</span>
 <span class="gp">... </span>    <span class="s1">&#39;27da3e&#39;</span>
 <span class="gp">... </span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sha512</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncsha512-argsvalue-900zz11&quot;&gt;Output: ValidationError(func=sha512, args={&#39;value&#39;: &#39;900zz11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sha512</span><span class="p">(</span><span class="s1">&#39;900zz11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=sha512, args={&#39;value&#39;: &#39;900zz11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1784,7 +1691,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="hostname">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">hostname</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_ipv6_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">skip_ipv4_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">may_have_port</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">maybe_simple</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
@@ -1800,61 +1707,25 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;ubuntu-pc:443&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;this-pc&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;xn----gtbspbbmkef.xn--p1ai:65535&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;_example.com&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-4&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;123.5.77.88:31000&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-5&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;12.12.12.12&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-6&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[::1]:22&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-7&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;dead:beef:0:0:0:0000:42:1&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-8&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[0:0:0:0:0:ffff:1.2.3.4]:-65538&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunchostname&quot;&gt;Output: ValidationError(func=hostname, ...)&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[0:&amp;:b:c:@:e:f::]:9999&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunchostname-2&quot;&gt;Output: ValidationError(func=hostname, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;this-pc&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;xn----gtbspbbmkef.xn--p1ai:65535&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;_example.com&quot;</span><span class="p">)</span>
+<span class="go">ValidationError(func=hostname, args={&#39;value&#39;: &#39;_example.com&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;123.5.77.88:31000&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;12.12.12.12&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[::1]:22&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;dead:beef:0:0:0:0000:42:1&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[0:0:0:0:0:ffff:1.2.3.4]:-65538&quot;</span><span class="p">)</span>
+<span class="go">ValidationError(func=hostname, args={&#39;value&#39;: &#39;[0:0:0:0:0:ffff:1.2.3.4]:-65538&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hostname</span><span class="p">(</span><span class="s2">&quot;[0:&amp;:b:c:@:e:f::]:9999&quot;</span><span class="p">)</span>
+<span class="go">ValidationError(func=hostname, args={&#39;value&#39;: &#39;[0:&amp;:b:c:@:e:f::]:9999&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1887,7 +1758,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="es_cif">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">es_cif</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1913,13 +1784,9 @@ will continue to call CIFs NIFs, that are used for companies.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_cif</span><span class="p">(</span><span class="s1">&#39;B25162520&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_cif</span><span class="p">(</span><span class="s1">&#39;B25162529&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_cif-args&quot;&gt;Output: ValidationError(func=es_cif, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_cif</span><span class="p">(</span><span class="s1">&#39;B25162529&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=es_cif, args={&#39;value&#39;: &#39;B25162529&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1942,7 +1809,7 @@ will continue to call CIFs NIFs, that are used for companies.</p>
                 </section>
                 <section id="es_doi">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">es_doi</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -1962,13 +1829,9 @@ is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_doi</span><span class="p">(</span><span class="s1">&#39;X0095892M&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_doi</span><span class="p">(</span><span class="s1">&#39;X0095892X&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_doi-args&quot;&gt;Output: ValidationError(func=es_doi, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_doi</span><span class="p">(</span><span class="s1">&#39;X0095892X&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=es_doi, args={&#39;value&#39;: &#39;X0095892X&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -1991,7 +1854,7 @@ is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
                 </section>
                 <section id="es_nie">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">es_nie</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2012,13 +1875,9 @@ is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nie</span><span class="p">(</span><span class="s1">&#39;X0095892M&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nie</span><span class="p">(</span><span class="s1">&#39;X0095892X&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_nie-args&quot;&gt;Output: ValidationError(func=es_nie, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_nie</span><span class="p">(</span><span class="s1">&#39;X0095892X&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=es_nie, args={&#39;value&#39;: &#39;X0095892X&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2041,7 +1900,7 @@ is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
                 </section>
                 <section id="es_nif">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">es_nif</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2062,13 +1921,9 @@ is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nif</span><span class="p">(</span><span class="s1">&#39;26643189N&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">es_nif</span><span class="p">(</span><span class="s1">&#39;26643189X&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunces_nif-args&quot;&gt;Output: ValidationError(func=es_nif, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_nif</span><span class="p">(</span><span class="s1">&#39;26643189X&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=es_nif, args={&#39;value&#39;: &#39;26643189X&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2091,7 +1946,7 @@ is based on <a href="https://generadordni.es/">generadordni.es</a>.</p>
                 </section>
                 <section id="fi_business_id">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">fi_business_id</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2110,13 +1965,9 @@ information see <a href="http://en.wikipedia.org/wiki/Finnish_Trade_Register">Fi
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_business_id</span><span class="p">(</span><span class="s1">&#39;0112038-9&#39;</span><span class="p">)</span>  <span class="c1"># Fast Monkeys Ltd</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_business_id</span><span class="p">(</span><span class="s1">&#39;1234567-8&#39;</span><span class="p">)</span>  <span class="c1"># Bogus ID</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfi_business_id&quot;&gt;Output: ValidationError(func=fi_business_id, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fi_business_id</span><span class="p">(</span><span class="s1">&#39;1234567-8&#39;</span><span class="p">)</span>  <span class="c1"># Bogus ID</span>
+<span class="go">ValidationError(func=fi_business_id, args={&#39;value&#39;: &#39;1234567-8&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2139,7 +1990,7 @@ information see <a href="http://en.wikipedia.org/wiki/Finnish_Trade_Register">Fi
                 </section>
                 <section id="fi_ssn">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">fi_ssn</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span>, </span><span class="param"><span class="o">*</span>, </span><span class="param"><span class="n">allow_temporal_ssn</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></span><span class="return-annotation">):</span></span>
@@ -2157,13 +2008,9 @@ information see <a href="http://en.wikipedia.org/wiki/Finnish_Trade_Register">Fi
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_ssn</span><span class="p">(</span><span class="s1">&#39;010101-0101&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fi_ssn</span><span class="p">(</span><span class="s1">&#39;101010-0102&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfi_ssn-args&quot;&gt;Output: ValidationError(func=fi_ssn, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fi_ssn</span><span class="p">(</span><span class="s1">&#39;101010-0102&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=fi_ssn, args={&#39;value&#39;: &#39;101010-0102&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2189,7 +2036,7 @@ SSN numbers are valid.</li>
                 </section>
                 <section id="fr_department">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">fr_department</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></span><span class="return-annotation">):</span></span>
@@ -2205,43 +2052,19 @@ SSN numbers are valid.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># can be an integer</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;20&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;971&quot;</span><span class="p">)</span>  <span class="c1"># Guadeloupe</span>
-<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;00&quot;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_department-args&quot;&gt;Output: ValidationError(func=fr_department, args=...)&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2A&#39;</span><span class="p">)</span>  <span class="c1"># Corsica</span>
-<span class="go">&lt;h1 id=&quot;output-true-4&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2B&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-5&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2C&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_department-args-2&quot;&gt;Output: ValidationError(func=fr_department, args=...)&lt;/h1&gt;</span>
+<span class="go">ValidationError(func=fr_department, args={&#39;value&#39;: 20})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;20&quot;</span><span class="p">)</span>
+<span class="go">ValidationError(func=fr_department, args={&#39;value&#39;: &#39;20&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;971&quot;</span><span class="p">)</span>  <span class="c1"># Guadeloupe</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s2">&quot;00&quot;</span><span class="p">)</span>
+<span class="go">ValidationError(func=fr_department, args={&#39;value&#39;: &#39;00&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2A&#39;</span><span class="p">)</span>  <span class="c1"># Corsica</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2B&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_department</span><span class="p">(</span><span class="s1">&#39;2C&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=fr_department, args={&#39;value&#39;: &#39;2C&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2264,7 +2087,7 @@ SSN numbers are valid.</li>
                 </section>
                 <section id="fr_ssn">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">fr_ssn</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
@@ -2283,25 +2106,13 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089 46&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089&#39;</span><span class="p">)</span>  <span class="c1"># control key is optional</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;3 84 12 76 451 089 46&#39;</span><span class="p">)</span>  <span class="c1"># wrong gender number</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_ssn-args&quot;&gt;Output: ValidationError(func=fr_ssn, args=...)&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089 47&#39;</span><span class="p">)</span>  <span class="c1"># wrong control key</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncfr_ssn-args-2&quot;&gt;Output: ValidationError(func=fr_ssn, args=...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089&#39;</span><span class="p">)</span>  <span class="c1"># control key is optional</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;3 84 12 76 451 089 46&#39;</span><span class="p">)</span>  <span class="c1"># wrong gender number</span>
+<span class="go">ValidationError(func=fr_ssn, args={&#39;value&#39;: &#39;3 84 12 76 451 089 46&#39;})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fr_ssn</span><span class="p">(</span><span class="s1">&#39;1 84 12 76 451 089 47&#39;</span><span class="p">)</span>  <span class="c1"># wrong control key</span>
+<span class="go">ValidationError(func=fr_ssn, args={&#39;value&#39;: &#39;1 84 12 76 451 089 47&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2324,7 +2135,7 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
                 </section>
                 <section id="ind_aadhar">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">ind_aadhar</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
@@ -2342,7 +2153,7 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ind_aadhar</span><span class="p">(</span><span class="s1">&#39;3675 9834 6015&#39;</span><span class="p">)</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ind_aadhar</span><span class="p">(</span><span class="s1">&#39;3675 ABVC 2133&#39;</span><span class="p">)</span>
-<span class="go">ValidationFailure(func=aadhar, args={&#39;value&#39;: &#39;3675 ABVC 2133&#39;})</span>
+<span class="go">ValidationError(func=ind_aadhar, args={&#39;value&#39;: &#39;3675 ABVC 2133&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2365,7 +2176,7 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
                 </section>
                 <section id="ind_pan">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">ind_pan</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
@@ -2383,7 +2194,7 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ind_pan</span><span class="p">(</span><span class="s1">&#39;ABCDE9999K&#39;</span><span class="p">)</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ind_pan</span><span class="p">(</span><span class="s1">&#39;ABC5d7896B&#39;</span><span class="p">)</span>
-<span class="go">ValidationFailure(func=pan, args={&#39;value&#39;: &#39;ABC5d7896B&#39;})</span>
+<span class="go">ValidationError(func=ind_pan, args={&#39;value&#39;: &#39;ABC5d7896B&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2404,9 +2215,66 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
 
 
                 </section>
+                <section id="ru_inn">
+                    <div class="attr function">
+                    <div class="decorator decorator-validator">@validator</div>
+
+        <span class="def">def</span>
+        <span class="name">ru_inn</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">):</span></span>
+
+        
+    </div>
+    <a class="headerlink" href="#ru_inn"></a>
+    
+            <div class="docstring"><p>Validate a Russian INN (Taxpayer Identification Number).</p>
+
+<p>The INN can be either 10 digits (for companies) or 12 digits (for individuals).
+The function checks both the length and the control digits according to Russian tax rules.</p>
+
+<h6 id="examples">Examples:</h6>
+
+<blockquote>
+  <div class="pdoc-code codehilite">
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ru_inn</span><span class="p">(</span><span class="s1">&#39;500100732259&#39;</span><span class="p">)</span>  <span class="c1"># Valid 12-digit INN</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ru_inn</span><span class="p">(</span><span class="s1">&#39;7830002293&#39;</span><span class="p">)</span>    <span class="c1"># Valid 10-digit INN</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ru_inn</span><span class="p">(</span><span class="s1">&#39;1234567890&#39;</span><span class="p">)</span>    <span class="c1"># Invalid INN</span>
+<span class="go">ValidationError(func=ru_inn, args={&#39;value&#39;: &#39;1234567890&#39;})</span>
+</code></pre>
+  </div>
+</blockquote>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>value:</strong>  Russian INN string to validate. Can contain only digits.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>(Literal[True]): If <code>value</code> is a valid Russian INN.
+  (ValidationError): If <code>value</code> is an invalid Russian INN.</p>
+</blockquote>
+
+<h6 id="note">Note:</h6>
+
+<blockquote>
+  <p>The validation follows the official algorithm:</p>
+  
+  <ul>
+  <li>For 10-digit INN: checks 10th control digit</li>
+  <li>For 12-digit INN: checks both 11th and 12th control digits</li>
+  </ul>
+</blockquote>
+</div>
+
+
+                </section>
                 <section id="iban">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">iban</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2422,13 +2290,9 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">iban</span><span class="p">(</span><span class="s1">&#39;DE29100500001061045672&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">iban</span><span class="p">(</span><span class="s1">&#39;123456&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunciban&quot;&gt;Output: ValidationError(func=iban, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">iban</span><span class="p">(</span><span class="s1">&#39;123456&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=iban, args={&#39;value&#39;: &#39;123456&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2451,7 +2315,7 @@ For more information see <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s
                 </section>
                 <section id="ipv4">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">ipv4</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">cidr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">host_bit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></span><span class="return-annotation">):</span></span>
@@ -2471,19 +2335,11 @@ was inspired from <a href="https://github.com/wtforms/wtforms/blob/master/src/wt
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;123.0.0.7&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;1.1.1.1/8&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;900.80.70.11&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncipv4-argsvalue-900807011&quot;&gt;Output: ValidationError(func=ipv4, args={&#39;value&#39;: &#39;900.80.70.11&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;1.1.1.1/8&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ipv4</span><span class="p">(</span><span class="s1">&#39;900.80.70.11&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=ipv4, args={&#39;value&#39;: &#39;900.80.70.11&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2510,7 +2366,7 @@ address, this function raises a validation error. ref <a href="https://docs.pyth
                 </section>
                 <section id="ipv6">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">ipv6</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">cidr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">host_bit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></span><span class="return-annotation">):</span></span>
@@ -2529,19 +2385,11 @@ was inspired from <a href="https://github.com/wtforms/wtforms/blob/master/src/wt
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;::ffff:192.0.2.128&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;::1/128&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;abc.0.0.1&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncipv6-argsvalue-abc001&quot;&gt;Output: ValidationError(func=ipv6, args={&#39;value&#39;: &#39;abc.0.0.1&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;::1/128&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ipv6</span><span class="p">(</span><span class="s1">&#39;abc.0.0.1&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=ipv6, args={&#39;value&#39;: &#39;abc.0.0.1&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2567,7 +2415,7 @@ address, this function raises a validation error. ref <a href="https://docs.pyth
                 </section>
                 <section id="length">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">length</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">min_val</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">max_val</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></span><span class="return-annotation">):</span></span>
@@ -2583,19 +2431,11 @@ address, this function raises a validation error. ref <a href="https://docs.pyth
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunclength&quot;&gt;Output: ValidationError(func=length, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">length</span><span class="p">(</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">ValidationError(func=length, args={&#39;value&#39;: &#39;something&#39;, &#39;max_val&#39;: 5})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2628,7 +2468,7 @@ maximum length will not be checked.</li>
                 </section>
                 <section id="mac_address">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">mac_address</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2646,13 +2486,9 @@ maximum length will not be checked.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mac_address</span><span class="p">(</span><span class="s1">&#39;01:23:45:67:ab:CD&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mac_address</span><span class="p">(</span><span class="s1">&#39;00:00:00:00:00&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncmac_address-argsvalue-0000000000&quot;&gt;Output: ValidationError(func=mac_address, args={&#39;value&#39;: &#39;00:00:00:00:00&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mac_address</span><span class="p">(</span><span class="s1">&#39;00:00:00:00:00&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=mac_address, args={&#39;value&#39;: &#39;00:00:00:00:00&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2675,7 +2511,7 @@ maximum length will not be checked.</li>
                 </section>
                 <section id="slug">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">slug</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2694,13 +2530,9 @@ It starts and ends with these lowercase alphanumeric characters.</p>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">slug</span><span class="p">(</span><span class="s1">&#39;my-slug-2134&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">slug</span><span class="p">(</span><span class="s1">&#39;my.slug&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncslug-argsvalue-myslug&quot;&gt;Output: ValidationError(func=slug, args={&#39;value&#39;: &#39;my.slug&#39;})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">slug</span><span class="p">(</span><span class="s1">&#39;my.slug&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=slug, args={&#39;value&#39;: &#39;my.slug&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2723,10 +2555,10 @@ It starts and ends with these lowercase alphanumeric characters.</p>
                 </section>
                 <section id="url">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
-        <span class="name">url</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_ipv6_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">skip_ipv4_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">may_have_port</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">simple_host</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">strict_query</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></span><span class="return-annotation">):</span></span>
+        <span class="name">url</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">value</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="o">/</span>,</span><span class="param">	<span class="o">*</span>,</span><span class="param">	<span class="n">skip_ipv6_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">skip_ipv4_addr</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">may_have_port</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">simple_host</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">strict_query</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>,</span><span class="param">	<span class="n">consider_tld</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">private</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">rfc_1034</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">rfc_2782</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>,</span><span class="param">	<span class="n">validate_scheme</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">_validate_scheme</span><span class="o">&gt;</span></span><span class="return-annotation">):</span></span>
 
         
     </div>
@@ -2748,25 +2580,13 @@ The following diagram is from <a href="https://github.com/treeform/urlly">urlly<
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://duck.com&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;ftp://foobar.dk&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-2&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://10.0.0.1&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true-3&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://example.com/&quot;&gt;user@example.com&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncurl&quot;&gt;Output: ValidationError(func=url, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;ftp://foobar.dk&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://10.0.0.1&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;http://example.com/&quot;&gt;user@example.com&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=url, args={&#39;value&#39;: &#39;http://example.com/&quot;&gt;user@example.com&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2786,6 +2606,7 @@ The following diagram is from <a href="https://github.com/treeform/urlly">urlly<
 Ref: <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>.</li>
 <li><strong>rfc_2782:</strong>  Domain/Host name is of type service record.
 Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
+<li><strong>validate_scheme:</strong>  Function that validates URL scheme.</li>
 </ul>
 
 <h6 id="returns">Returns:</h6>
@@ -2800,7 +2621,7 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
                 </section>
                 <section id="uuid">
                     <div class="attr function">
-                    <div class="decorator">@validator</div>
+                    <div class="decorator decorator-validator">@validator</div>
 
         <span class="def">def</span>
         <span class="name">uuid</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">]</span>, </span><span class="param"><span class="o">/</span></span><span class="return-annotation">):</span></span>
@@ -2818,13 +2639,9 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
 <blockquote>
   <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">uuid</span><span class="p">(</span><span class="s1">&#39;2bc1c94f-0deb-43e9-92a1-4775189ec9f8&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">uuid</span><span class="p">(</span><span class="s1">&#39;2bc1c94f 0deb-43e9-92a1-4775189ec9f8&#39;</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfuncuuid&quot;&gt;Output: ValidationError(func=uuid, ...)&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">uuid</span><span class="p">(</span><span class="s1">&#39;2bc1c94f 0deb-43e9-92a1-4775189ec9f8&#39;</span><span class="p">)</span>
+<span class="go">ValidationError(func=uuid, args={&#39;value&#39;: &#39;2bc1c94f 0deb-43e9-92a1-4775189ec9f8&#39;})</span>
 </code></pre>
   </div>
 </blockquote>
@@ -2884,17 +2701,6 @@ Ref: <a href="https://www.rfc-editor.org/rfc/rfc2782">RFC 2782</a>.</li>
     
 
                             </div>
-                            <div class="inherited">
-                                <h5>Inherited Members</h5>
-                                <dl>
-                                    <div><dt>builtins.BaseException</dt>
-                                <dd id="ValidationError.with_traceback" class="function">with_traceback</dd>
-                <dd id="ValidationError.add_note" class="function">add_note</dd>
-                <dd id="ValidationError.args" class="variable">args</dd>
-
-            </div>
-                                </dl>
-                            </div>
                 </section>
                 <section id="validator">
                     <div class="attr function">
@@ -2919,13 +2725,9 @@ decorator returns <code><a href="#ValidationError">ValidationError</a></code> ob
 <span class="gp">... </span><span class="k">def</span><span class="w"> </span><span class="nf">even</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="n">value</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-true&quot;&gt;Output: True&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-  
-  <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">even</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">&lt;h1 id=&quot;output-validationerrorfunceven-argsvalue-5&quot;&gt;Output: ValidationError(func=even, args={&#39;value&#39;: 5})&lt;/h1&gt;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">even</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">ValidationError(func=even, args={&#39;value&#39;: 5})</span>
 </code></pre>
   </div>
 </blockquote>
