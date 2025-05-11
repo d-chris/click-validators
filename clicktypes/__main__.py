@@ -12,7 +12,21 @@ def overload_info(func: Callable) -> Dict[str, Any]:
 
     sig = inspect.signature(func)
 
-    params = ", ".join(str(p) for p in sig.parameters.values() if p.name != "value")
+    param_lst: List[str] = []
+    kwargs = False
+    for param in sig.parameters.values():
+        if param.name == "value":
+            continue
+        if callable(param.default):
+            kwargs = True
+            continue
+
+        param_lst.append(str(param))
+    else:
+        if kwargs:
+            param_lst.append("**kwargs")
+
+    params = ",".join(param_lst)
     params = (params.rstrip(",") + ",") if params else ""
 
     doc = inspect.getdoc(func) or ""

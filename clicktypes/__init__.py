@@ -387,6 +387,24 @@ def md5() -> click.ParamType:
     return click_validatortype(validators.md5)()
 
 
+def mir() -> click.ParamType:
+    """
+    Return whether or not given value is a valid Mir card number.
+
+    Returns a `click.ParamType` instance which wraps `validators.mir`.
+    """
+    return click_validatortype(validators.mir)()
+
+
+def ru_inn() -> click.ParamType:
+    """
+    Validate a Russian INN (Taxpayer Identification Number).
+
+    Returns a `click.ParamType` instance which wraps `validators.ru_inn`.
+    """
+    return click_validatortype(validators.ru_inn)()
+
+
 def sedol() -> click.ParamType:
     """
     Return whether or not given value is a valid SEDOL.
@@ -479,6 +497,7 @@ def url(
     private: Optional[bool] = None,
     rfc_1034: bool = False,
     rfc_2782: bool = False,
+    **kwargs,
 ) -> click.ParamType:
     """
     Return whether or not given value is a valid URL.
@@ -544,6 +563,8 @@ __all__ = [
     "mac_address",
     "mastercard",
     "md5",
+    "mir",
+    "ru_inn",
     "sedol",
     "sha1",
     "sha224",
