@@ -51,6 +51,8 @@ Additional `click` parameter types are built on top of the `validators` library,
 - `clicktypes.mac_address()`
 - `clicktypes.mastercard()`
 - `clicktypes.md5()`
+- `clicktypes.mir()`
+- `clicktypes.ru_inn()`
 - `clicktypes.sedol()`
 - `clicktypes.sha1()`
 - `clicktypes.sha224()`
