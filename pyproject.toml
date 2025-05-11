@@ -70,7 +70,7 @@ addopts = [
   "-s",
   "--color=yes",
   "--cov=clicktypes",
-  "--cov-report=term-missing:skip-covered",
+  "--cov-report=term-missing",
   "--cov-report=xml",
 ]
 
