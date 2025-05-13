@@ -41,6 +41,7 @@ def test_none(validator):
     sorted(
         validator_data(),
     ),
+    ids=repr,
 )
 def test_dataset(validator, value, kwargs, expected):
 

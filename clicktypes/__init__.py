@@ -504,7 +504,9 @@ def url(
 
     Returns a `click.ParamType` instance which wraps `validators.url`.
     """
-    return click_validatortype(validators.url)(**locals())
+
+    params = {k: v for k, v in locals().items() if k != "kwargs"}
+    return click_validatortype(validators.url)(**params, **kwargs)
 
 
 def uuid() -> click.ParamType:
