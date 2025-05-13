@@ -1,5 +1,6 @@
 import functools
-from typing import Callable, Type
+from typing import Callable
+from typing import Type
 
 import click
 

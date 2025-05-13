@@ -61,6 +61,8 @@ priority = "explicit"
 
 [tool.isort]
 profile = "black"
+force_single_line = true
+line_length = 88
 
 [tool.pytest.ini_options]
 minversion = "6.0"

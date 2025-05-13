@@ -1,6 +1,7 @@
 import inspect
 import re
-from typing import Generator, Tuple
+from typing import Generator
+from typing import Tuple
 
 import validators
 

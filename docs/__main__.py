@@ -34,7 +34,8 @@ def main() -> int:
 
     try:
         from pathlibutil import Path
-        from pdoc import pdoc, render
+        from pdoc import pdoc
+        from pdoc import render
 
         with Path(__file__).parent as cwd:
             print(f"\nrunning docs in {cwd=}...")
