@@ -21,7 +21,12 @@ def {{ validator.name }}(
 
     Returns a `click.ParamType` instance which wraps `validators.{{ validator.name }}`.
     """
+    {% if "**kwargs" in validator.params %}
+    params = {k: v for k, v in locals().items() if k != "kwargs"}
+    return click_validatortype(validators.{{ validator.name }})(**params, **kwargs)
+    {% else -%}
     return click_validatortype(validators.{{ validator.name }})(**locals())
+    {% endif %}
 {% else %}
 def {{ validator.name }}() -> click.ParamType:
     """

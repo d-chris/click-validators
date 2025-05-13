@@ -41,9 +41,10 @@ def test_none(validator):
     sorted(
         validator_data(),
     ),
+    ids=repr,
 )
 def test_dataset(validator, value, kwargs, expected):
 
     runner = CliRunner()
-    result = runner.invoke(cli(validator, **kwargs), [value])
+    result = runner.invoke(cli(validator, **kwargs), value)
     assert result.exit_code == expected
