@@ -20,9 +20,6 @@ def docstrings() -> Generator[str, None, None]:
 
 def testdata(doc: str) -> Generator[Tuple[str, str, int], None, None]:
 
-    if "ind_pan" in doc:
-        pass
-
     def parse_call(s: str):
         tree = ast.parse(s.strip(), mode="eval")
         if not isinstance(tree.body, ast.Call):
