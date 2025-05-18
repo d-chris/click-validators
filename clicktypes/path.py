@@ -54,5 +54,7 @@ class Path(click.Path):
             )
             value = shutil.which(value, path=path) or value
 
+            self.exists = True
+
         finally:
             return super().convert(value, param, ctx)

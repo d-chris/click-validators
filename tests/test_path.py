@@ -25,7 +25,7 @@ import clicktypes
                 "resolve_path": True,
                 "executable": True,
             },
-            1,
+            2,
         ],
         [
             ("python"),
