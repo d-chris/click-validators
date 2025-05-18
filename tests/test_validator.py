@@ -32,7 +32,7 @@ def test_help(validator):
 )
 def test_none(validator):
     runner = CliRunner()
-    result = runner.invoke(cli(validator), [""])
+    result = runner.invoke(cli(validator), ())
     assert result.exit_code == 2
 
 

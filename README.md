@@ -14,6 +14,7 @@
 
 Additional `click` parameter types are built on top of the `validators` library, providing a wide range of validation options for various data types, including email addresses, IP addresses, credit card numbers, and more. This package simplifies the process of adding robust validation to your Click-based CLI applications.
 
+- `clicktypes.Path()`
 - `clicktypes.amex()`
 - `clicktypes.base16()`
 - `clicktypes.base32()`

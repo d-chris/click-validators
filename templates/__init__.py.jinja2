@@ -8,6 +8,7 @@ import click
 import validators
 
 from .decorator import click_validatortype
+from .path import Path
 
 {% for validator in validators %}
 
@@ -39,6 +40,7 @@ def {{ validator.name }}() -> click.ParamType:
 {% endfor %}
 
 __all__ = [
+    "Path",
     {% for validator in validators %}
     "{{ validator.name }}",
     {% endfor %}

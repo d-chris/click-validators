@@ -8,6 +8,7 @@ import click
 import validators
 
 from .decorator import click_validatortype
+from .path import Path
 
 
 def amex() -> click.ParamType:
@@ -528,6 +529,7 @@ def visa() -> click.ParamType:
 
 
 __all__ = [
+    "Path",
     "amex",
     "base16",
     "base32",

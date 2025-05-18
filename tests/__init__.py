@@ -12,10 +12,13 @@ import clicktypes
 def docstrings() -> Generator[str, None, None]:
     """docstrings from all clicktypes validators."""
 
-    yield from (
-        inspect.getdoc(getattr(validators, validator)) or ""
-        for validator in clicktypes.__all__
-    )
+    for validator in clicktypes.__all__:
+        try:
+            func = getattr(validators, validator)
+        except AttributeError:
+            continue
+
+        yield inspect.getdoc(func) or ""
 
 
 def testdata(doc: str) -> Generator[Tuple[str, str, int], None, None]:
